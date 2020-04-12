@@ -1,0 +1,14 @@
+{
+	"entity": {
+		"BP/entities/coordinate_reader.json": {
+			"events": [],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"spacon:coordinate_reader"
+			],
+			"animation_references": [],
+			"families": []
+		}
+	}
+}

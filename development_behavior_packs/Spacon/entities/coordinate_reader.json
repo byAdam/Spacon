@@ -1,0 +1,23 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "spacon:coordinate_reader",
+			"runtime_identifier": "",
+			"is_summonable": true,
+			"is_spawnable": true
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			}
+		},
+		"component_groups": {},
+		"events": {}
+	}
+}
