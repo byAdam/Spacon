@@ -1,0 +1,15 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.teleporter.in_block": {
+			"timeline": {
+				"0.0": [
+					"/execute @s ~ ~ ~ detect ~ ~ ~ air 0 tag @s add spacon_despawn"
+				]
+			},
+			"animation_length": 0.25,
+			"loop": true
+		}
+	}
+}

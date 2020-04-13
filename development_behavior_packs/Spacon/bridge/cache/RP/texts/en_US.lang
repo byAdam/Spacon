@@ -1,0 +1,8 @@
+{
+	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_resource_packs\\Spacon\\texts\\en_US.lang",
+	"file_type": "client_lang",
+	"format_version": 0,
+	"file_uuid": "89512e6d_1021_4960_aa35_b01ad2b6f255",
+	"file_version": 2,
+	"cache_content": "pack.name=Spacon\npack.description=by Adam Brady\n\ntile.spacon:teleporter_blank.name=Teleporter\ntile.spacon:teleporter_red.name=Teleporter Red"
+}

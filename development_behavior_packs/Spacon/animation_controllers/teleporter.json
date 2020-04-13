@@ -1,0 +1,33 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.teleporter": {
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"in_block": "(1.0)"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.teleporter.color": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"red": "query.variant==0"
+						}
+					]
+				},
+				"red": {
+					"on_entry": [
+						"/setblock ~ ~ ~ teleporter_red"
+					]
+				}
+			}
+		}
+	}
+}

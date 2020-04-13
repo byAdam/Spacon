@@ -1,7 +1,24 @@
+//bridge-file-version: #8
 {
-  "resource_pack_name": "bridgeRP",
-  "texture_name": "atlas.terrain",
-  "padding": 8,
-  "num_mip_levels": 4,
-  "texture_data": {}
+	"resource_pack_name": "spacon",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"teleporter_up_red": {
+			"textures": "textures/blocks/teleporter/up/red"
+		},
+		"teleporter_side_red": {
+			"textures": "textures/blocks/teleporter/side/red"
+		},
+		"teleporter_up_off": {
+			"textures": "textures/blocks/teleporter/up/blank"
+		},
+		"teleporter_side_off": {
+			"textures": "textures/blocks/teleporter/side/blank"
+		},
+		"teleporter_down": {
+			"textures": "textures/blocks/teleporter/down"
+		}
+	}
 }

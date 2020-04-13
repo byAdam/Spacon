@@ -9,6 +9,137 @@
 			],
 			"animation_references": [],
 			"families": []
+		},
+		"BP/tags/tag_despawn.json": {
+			"events": [
+				"spacon:despawn"
+			],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [],
+			"animation_references": [],
+			"families": []
+		},
+		"BP/tags/marker.json": {
+			"events": [],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [],
+			"animation_references": [],
+			"families": []
+		},
+		"BP/entities/misc/teleporter_marker.json": {
+			"events": [
+				"spacon:teleporter_red"
+			],
+			"custom_components": [],
+			"bridge_core_tags": [
+				"spacon:tag_despawn",
+				"spacon:marker"
+			],
+			"identifiers": [
+				"spacon:teleporter_marker"
+			],
+			"animation_references": [
+				"controller",
+				"in_block",
+				"color_controller"
+			],
+			"families": []
+		},
+		"BP/entities/player.json": {
+			"events": [
+				"minecraft:gain_bad_omen",
+				"minecraft:clear_add_bad_omen",
+				"minecraft:trigger_raid",
+				"minecraft:remove_raid_trigger"
+			],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"minecraft:player"
+			],
+			"animation_references": [
+				"use_controller"
+			],
+			"families": [
+				"player"
+			]
+		},
+		"BP/entities/misc/raycast.json": {
+			"events": [],
+			"custom_components": [],
+			"bridge_core_tags": [
+				"spacon:marker"
+			],
+			"identifiers": [
+				"spacon:raycast"
+			],
+			"animation_references": [],
+			"families": []
+		}
+	},
+	"animation_controller": {
+		"BP/animation_controllers/teleporter.json": {
+			"ids": [
+				"controller.animation.teleporter",
+				"controller.animation.teleporter.color"
+			]
+		},
+		"BP/animation_controllers/player.json": {
+			"ids": [
+				"controller.animation.player.use"
+			]
+		}
+	},
+	"animation": {
+		"BP/animations/teleporter.json": {
+			"ids": [
+				"animation.teleporter.in_block"
+			]
+		}
+	},
+	"entity_tag": {
+		"BP/tags/tag_despawn.json": {
+			"identifiers": [
+				"spacon:tag_despawn"
+			]
+		},
+		"BP/tags/marker.json": {
+			"identifiers": [
+				"spacon:marker"
+			]
+		}
+	},
+	"block": {
+		"BP/blocks/teleporter_red.json": {
+			"identifiers": [
+				"spacon:teleporter_blank"
+			]
+		},
+		"BP/blocks/teleporter_blank.json": {
+			"identifiers": [
+				"spacon:teleporter_red_off"
+			]
+		}
+	},
+	"client_entity": {
+		"RP/entity/teleporter_marker.json": {
+			"identifiers": [
+				"spacon:teleporter_marker"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
 		}
 	}
 }

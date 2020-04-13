@@ -1,0 +1,35 @@
+//bridge-file-version: #4
+{
+	"bridge:tag": {
+		"description": {
+			"identifier": "spacon:tag_despawn"
+		},
+		"component_groups": {
+			"spacon:despawn": {
+				"minecraft:despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"test": "has_tag",
+							"value": "spacon_despawn"
+						},
+						"event": "spacon:despawn"
+					}
+				]
+			}
+		},
+		"events": {
+			"spacon:despawn": {
+				"add": {
+					"component_groups": [
+						"spacon:despawn"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,158 @@
+{
+	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_resource_packs\\Spacon\\textures\\terrain_texture.json",
+	"file_type": "terrain_texture",
+	"format_version": 1,
+	"file_uuid": "b73edace_7e7e_4efd_9b38_0869ac085ee2",
+	"file_version": 8,
+	"cache_content": {
+		"open": true,
+		"comment": "",
+		"data": "",
+		"key": "global",
+		"type": "object",
+		"meta": {},
+		"children": [
+			{
+				"open": true,
+				"comment": "",
+				"data": "spacon",
+				"key": "resource_pack_name",
+				"type": "string",
+				"meta": {},
+				"children": []
+			},
+			{
+				"open": false,
+				"comment": "",
+				"data": "atlas.terrain",
+				"key": "texture_name",
+				"type": "string",
+				"meta": {},
+				"children": []
+			},
+			{
+				"open": false,
+				"comment": "",
+				"data": "8",
+				"key": "padding",
+				"type": "number",
+				"meta": {},
+				"children": []
+			},
+			{
+				"open": false,
+				"comment": "",
+				"data": "4",
+				"key": "num_mip_levels",
+				"type": "number",
+				"meta": {},
+				"children": []
+			},
+			{
+				"open": true,
+				"comment": "",
+				"data": "",
+				"key": "texture_data",
+				"type": "object",
+				"meta": {},
+				"children": [
+					{
+						"open": true,
+						"comment": "",
+						"data": "",
+						"key": "teleporter_up_red",
+						"type": "object",
+						"meta": {},
+						"children": [
+							{
+								"open": true,
+								"comment": "",
+								"data": "textures/blocks/teleporter/up/red",
+								"key": "textures",
+								"type": "string",
+								"meta": {},
+								"children": []
+							}
+						]
+					},
+					{
+						"open": true,
+						"comment": "",
+						"data": "",
+						"key": "teleporter_side_red",
+						"type": "object",
+						"meta": {},
+						"children": [
+							{
+								"open": true,
+								"comment": "",
+								"data": "textures/blocks/teleporter/side/red",
+								"key": "textures",
+								"type": "string",
+								"meta": {},
+								"children": []
+							}
+						]
+					},
+					{
+						"open": true,
+						"comment": "",
+						"data": "",
+						"key": "teleporter_up_off",
+						"type": "object",
+						"meta": {},
+						"children": [
+							{
+								"open": true,
+								"comment": "",
+								"data": "textures/blocks/teleporter/up/blank",
+								"key": "textures",
+								"type": "string",
+								"meta": {},
+								"children": []
+							}
+						]
+					},
+					{
+						"open": true,
+						"comment": "",
+						"data": "",
+						"key": "teleporter_side_off",
+						"type": "object",
+						"meta": {},
+						"children": [
+							{
+								"open": false,
+								"comment": "",
+								"data": "textures/blocks/teleporter/side/blank",
+								"key": "textures",
+								"type": "string",
+								"meta": {},
+								"children": []
+							}
+						]
+					},
+					{
+						"open": true,
+						"comment": "",
+						"data": "",
+						"key": "teleporter_down",
+						"type": "object",
+						"meta": {},
+						"children": [
+							{
+								"open": false,
+								"comment": "",
+								"data": "textures/blocks/teleporter/down",
+								"key": "textures",
+								"type": "string",
+								"meta": {},
+								"children": []
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

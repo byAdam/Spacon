@@ -1,0 +1,215 @@
+{
+	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Spacon\\animation_controllers\\player.json",
+	"file_type": "animation_controller",
+	"format_version": 1,
+	"file_uuid": "b37075b2_92a8_4de6_8fdb_5e341a71d7d1",
+	"file_version": 24,
+	"cache_content": {
+		"open": true,
+		"comment": "",
+		"data": "",
+		"key": "global",
+		"type": "object",
+		"meta": {},
+		"children": [
+			{
+				"open": true,
+				"comment": "",
+				"data": "1.10.0",
+				"key": "format_version",
+				"type": "string",
+				"meta": {},
+				"children": []
+			},
+			{
+				"open": true,
+				"comment": "",
+				"data": "",
+				"key": "animation_controllers",
+				"type": "object",
+				"meta": {},
+				"children": [
+					{
+						"open": true,
+						"comment": "",
+						"data": "",
+						"key": "controller.animation.player.use",
+						"type": "object",
+						"meta": {},
+						"children": [
+							{
+								"open": true,
+								"comment": "",
+								"data": "",
+								"key": "states",
+								"type": "object",
+								"meta": {},
+								"children": [
+									{
+										"open": true,
+										"comment": "",
+										"data": "",
+										"key": "default",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "transitions",
+												"type": "object",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "variable.attack_time",
+																"key": "on_use",
+																"type": "string",
+																"meta": {
+																	"is_molang": true
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"open": true,
+										"comment": "",
+										"data": "",
+										"key": "on_use",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "transitions",
+												"type": "object",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": true,
+																"comment": "",
+																"data": "query.get_equipped_item_name(0, 0) == 'teleporter_red_off'",
+																"key": "raycast",
+																"type": "string",
+																"meta": {
+																	"is_molang": true
+																},
+																"children": []
+															}
+														]
+													},
+													{
+														"open": true,
+														"comment": "",
+														"data": "",
+														"key": "1",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "!variable.attack_time",
+																"key": "default",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"open": true,
+										"comment": "",
+										"data": "",
+										"key": "raycast",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "on_entry",
+												"type": "object",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "/function spacon/misc/raycast",
+														"key": "0",
+														"type": "string",
+														"meta": {},
+														"children": []
+													}
+												]
+											},
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "transitions",
+												"type": "array",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "!variable.attack_time",
+																"key": "default",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

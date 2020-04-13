@@ -1,0 +1,30 @@
+//bridge-file-version: #3
+{
+	"minecraft:entity": {
+		"description": {
+			"identifier": "spacon:raycast",
+			"runtime_identifier": "",
+			"is_summonable": true,
+			"is_spawnable": true
+		},
+		"component_groups": {},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:scale": {
+				"value": 0
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			}
+		},
+		"events": {}
+	},
+	"format_version": "1.10.0"
+}

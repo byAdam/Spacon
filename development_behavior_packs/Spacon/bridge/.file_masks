@@ -1,5 +1,124 @@
 {
 	"BP/entities/coordinate_reader.json": {
 		"data": {}
+	},
+	"BP/animation_controllers/teleporter.json": {
+		"data": {}
+	},
+	"BP/animations/teleporter.json": {
+		"data": {}
+	},
+	"BP/tags/tag_despawn.json": {
+		"data": {}
+	},
+	"BP/blocks/teleporter_red.json": {
+		"data": {}
+	},
+	"RP/blocks.json": {
+		"data": {}
+	},
+	"RP/textures/terrain_texture.json": {
+		"data": {}
+	},
+	"RP/entity/teleporter_marker.json": {
+		"data": {}
+	},
+	"BP/tags/marker.json": {
+		"data": {}
+	},
+	"BP/entities/misc/teleporter_marker.json": {
+		"data": {
+			"tag@spacon:tag_despawn": {
+				"minecraft:entity": {
+					"description": {},
+					"component_groups": {
+						"spacon:despawn": {
+							"minecraft:despawn": {}
+						}
+					},
+					"components": {
+						"minecraft:environment_sensor": {
+							"triggers": [
+								{
+									"filters": {
+										"test": "has_tag",
+										"value": "spacon_despawn"
+									},
+									"event": "spacon:despawn"
+								}
+							]
+						}
+					},
+					"events": {
+						"spacon:despawn": {
+							"add": {
+								"component_groups": [
+									"spacon:despawn"
+								]
+							}
+						}
+					}
+				}
+			},
+			"tag@spacon:marker": {
+				"minecraft:entity": {
+					"description": {},
+					"component_groups": {},
+					"components": {
+						"minecraft:damage_sensor": {
+							"triggers": [
+								{
+									"deals_damage": false
+								}
+							]
+						},
+						"minecraft:scale": {
+							"value": 0
+						},
+						"minecraft:collision_box": {
+							"width": 0,
+							"height": 0
+						}
+					},
+					"events": {}
+				}
+			}
+		}
+	},
+	"BP/blocks/teleporter_blank.json": {
+		"data": {}
+	},
+	"BP/animation_controllers/player.json": {
+		"data": {}
+	},
+	"BP/entities/player.json": {
+		"data": {}
+	},
+	"BP/entities/misc/raycast.json": {
+		"data": {
+			"tag@spacon:marker": {
+				"minecraft:entity": {
+					"description": {},
+					"component_groups": {},
+					"components": {
+						"minecraft:damage_sensor": {
+							"triggers": [
+								{
+									"deals_damage": false
+								}
+							]
+						},
+						"minecraft:scale": {
+							"value": 0
+						},
+						"minecraft:collision_box": {
+							"width": 0,
+							"height": 0
+						}
+					},
+					"events": {}
+				}
+			}
+		}
 	}
 }

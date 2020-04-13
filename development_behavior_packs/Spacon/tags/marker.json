@@ -1,0 +1,26 @@
+//bridge-file-version: #3
+{
+	"bridge:tag": {
+		"description": {
+			"identifier": "spacon:marker"
+		},
+		"component_groups": {},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:scale": {
+				"value": 0
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			}
+		},
+		"events": {}
+	}
+}

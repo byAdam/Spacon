@@ -1,0 +1,183 @@
+{
+	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Spacon\\animation_controllers\\teleporter.json",
+	"file_type": "animation_controller",
+	"format_version": 1,
+	"file_uuid": "4bc31e7b_3be6_49f5_bf24_37a5d63ade62",
+	"file_version": 10,
+	"cache_content": {
+		"open": true,
+		"comment": "",
+		"data": "",
+		"key": "global",
+		"type": "object",
+		"meta": {},
+		"children": [
+			{
+				"open": true,
+				"comment": "",
+				"data": "1.10.0",
+				"key": "format_version",
+				"type": "string",
+				"meta": {},
+				"children": []
+			},
+			{
+				"open": true,
+				"comment": "",
+				"data": "",
+				"key": "animation_controllers",
+				"type": "object",
+				"meta": {},
+				"children": [
+					{
+						"open": true,
+						"comment": "",
+						"data": "",
+						"key": "controller.animation.teleporter",
+						"type": "object",
+						"meta": {},
+						"children": [
+							{
+								"open": true,
+								"comment": "",
+								"data": "",
+								"key": "states",
+								"type": "object",
+								"meta": {},
+								"children": [
+									{
+										"open": true,
+										"comment": "",
+										"data": "",
+										"key": "default",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "animations",
+												"type": "object",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "(1.0)",
+																"key": "in_block",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"open": true,
+						"comment": "",
+						"data": "",
+						"key": "controller.animation.teleporter.color",
+						"type": "object",
+						"meta": {},
+						"children": [
+							{
+								"open": true,
+								"comment": "",
+								"data": "",
+								"key": "states",
+								"type": "object",
+								"meta": {},
+								"children": [
+									{
+										"open": true,
+										"comment": "",
+										"data": "",
+										"key": "default",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "transitions",
+												"type": "object",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "query.variant==0",
+																"key": "red",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"open": true,
+										"comment": "",
+										"data": "",
+										"key": "red",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "on_entry",
+												"type": "object",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "/setblock ~ ~ ~ teleporter_red",
+														"key": "0",
+														"type": "string",
+														"meta": {},
+														"children": []
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

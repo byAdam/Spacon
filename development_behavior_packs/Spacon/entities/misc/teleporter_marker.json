@@ -1,0 +1,76 @@
+//bridge-file-version: #18
+{
+	"minecraft:entity": {
+		"description": {
+			"identifier": "spacon:teleporter_marker",
+			"is_summonable": true,
+			"is_spawnable": true,
+			"animations": {
+				"controller": "controller.animation.teleporter",
+				"in_block": "animation.teleporter.in_block",
+				"color_controller": "controller.animation.teleporter.color"
+			},
+			"scripts": {
+				"animate": [
+					"color_controller",
+					"controller"
+				]
+			},
+			"runtime_identifier": "minecraft:shulker"
+		},
+		"component_groups": {
+			"spacon:despawn": {
+				"minecraft:despawn": {}
+			},
+			"spacon:teleporter_red": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			}
+		},
+		"components": {
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"test": "has_tag",
+							"value": "spacon_despawn"
+						},
+						"event": "spacon:despawn"
+					}
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:scale": {
+				"value": 0
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			}
+		},
+		"events": {
+			"spacon:despawn": {
+				"add": {
+					"component_groups": [
+						"spacon:despawn"
+					]
+				}
+			},
+			"spacon:teleporter_red": {
+				"add": {
+					"component_groups": [
+						"spacon:teleporter_red"
+					]
+				}
+			}
+		}
+	},
+	"format_version": "1.13.0"
+}

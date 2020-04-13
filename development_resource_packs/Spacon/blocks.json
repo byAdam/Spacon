@@ -1,3 +1,24 @@
+//bridge-file-version: #6
 {
-  "format_version": [1, 1, 0]
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"spacon:teleporter_red": {
+		"sound": "metal",
+		"textures": {
+			"up": "teleporter_up_red",
+			"down": "teleporter_down",
+			"side": "teleporter_side_red"
+		}
+	},
+	"spacon:teleporter_red_off": {
+		"sound": "metal",
+		"textures": {
+			"up": "teleporter_up_off",
+			"down": "teleporter_down",
+			"side": "teleporter_side_off"
+		}
+	}
 }

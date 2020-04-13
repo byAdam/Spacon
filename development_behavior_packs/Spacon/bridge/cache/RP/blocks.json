@@ -1,0 +1,174 @@
+{
+	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_resource_packs\\Spacon\\blocks.json",
+	"file_type": "client_block",
+	"format_version": 1,
+	"file_uuid": "77cd6cff_eac1_4ce6_8529_c5e407ddcda1",
+	"file_version": 6,
+	"cache_content": {
+		"open": true,
+		"comment": "",
+		"data": "",
+		"key": "global",
+		"type": "object",
+		"meta": {},
+		"children": [
+			{
+				"open": false,
+				"comment": "",
+				"data": "",
+				"key": "format_version",
+				"type": "array",
+				"meta": {},
+				"children": [
+					{
+						"open": false,
+						"comment": "",
+						"data": "1",
+						"key": "0",
+						"type": "number",
+						"meta": {},
+						"children": []
+					},
+					{
+						"open": true,
+						"comment": "",
+						"data": "1",
+						"key": "1",
+						"type": "number",
+						"meta": {},
+						"children": []
+					},
+					{
+						"open": false,
+						"comment": "",
+						"data": "0",
+						"key": "2",
+						"type": "number",
+						"meta": {},
+						"children": []
+					}
+				]
+			},
+			{
+				"open": true,
+				"comment": "",
+				"data": "",
+				"key": "spacon:teleporter_red",
+				"type": "object",
+				"meta": {},
+				"children": [
+					{
+						"open": true,
+						"comment": "",
+						"data": "metal",
+						"key": "sound",
+						"type": "string",
+						"meta": {
+							"is_value": true
+						},
+						"children": []
+					},
+					{
+						"open": true,
+						"comment": "",
+						"data": "",
+						"key": "textures",
+						"type": "object",
+						"meta": {},
+						"children": [
+							{
+								"open": true,
+								"comment": "",
+								"data": "teleporter_up_red",
+								"key": "up",
+								"type": "string",
+								"meta": {
+									"is_value": true
+								},
+								"children": []
+							},
+							{
+								"open": false,
+								"comment": "",
+								"data": "teleporter_down",
+								"key": "down",
+								"type": "string",
+								"meta": {
+									"is_value": true
+								},
+								"children": []
+							},
+							{
+								"open": true,
+								"comment": "",
+								"data": "teleporter_side_red",
+								"key": "side",
+								"type": "string",
+								"meta": {
+									"is_value": true
+								},
+								"children": []
+							}
+						]
+					}
+				]
+			},
+			{
+				"open": true,
+				"comment": "",
+				"data": "",
+				"key": "spacon:teleporter_red_off",
+				"type": "object",
+				"meta": {},
+				"children": [
+					{
+						"open": false,
+						"comment": "",
+						"data": "metal",
+						"key": "sound",
+						"type": "string",
+						"meta": {},
+						"children": []
+					},
+					{
+						"open": true,
+						"comment": "",
+						"data": "",
+						"key": "textures",
+						"type": "object",
+						"meta": {},
+						"children": [
+							{
+								"open": true,
+								"comment": "",
+								"data": "teleporter_up_off",
+								"key": "up",
+								"type": "string",
+								"meta": {},
+								"children": []
+							},
+							{
+								"open": false,
+								"comment": "",
+								"data": "teleporter_down",
+								"key": "down",
+								"type": "string",
+								"meta": {},
+								"children": []
+							},
+							{
+								"open": true,
+								"comment": "",
+								"data": "teleporter_side_off",
+								"key": "side",
+								"type": "string",
+								"meta": {},
+								"children": []
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}
