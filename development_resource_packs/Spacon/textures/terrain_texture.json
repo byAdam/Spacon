@@ -6,16 +6,40 @@
 	"num_mip_levels": 4,
 	"texture_data": {
 		"teleporter_up_red": {
-			"textures": "textures/blocks/teleporter/up/red"
+			"textures": "textures/blocks/teleporter/up/on/red"
 		},
 		"teleporter_side_red": {
-			"textures": "textures/blocks/teleporter/side/red"
+			"textures": "textures/blocks/teleporter/side/on/red"
 		},
-		"teleporter_up_off": {
-			"textures": "textures/blocks/teleporter/up/blank"
+		"teleporter_up_red_off": {
+			"textures": "textures/blocks/teleporter/up/off/red"
 		},
-		"teleporter_side_off": {
-			"textures": "textures/blocks/teleporter/side/blank"
+		"teleporter_side_red_off": {
+			"textures": "textures/blocks/teleporter/side/off/red"
+		},
+		"teleporter_up_blue": {
+			"textures": "textures/blocks/teleporter/up/on/blue"
+		},
+		"teleporter_side_blue": {
+			"textures": "textures/blocks/teleporter/side/on/blue"
+		},
+		"teleporter_up_blue_off": {
+			"textures": "textures/blocks/teleporter/up/off/blue"
+		},
+		"teleporter_side_blue_off": {
+			"textures": "textures/blocks/teleporter/side/off/blue"
+		},
+		"teleporter_up_green": {
+			"textures": "textures/blocks/teleporter/up/on/green"
+		},
+		"teleporter_side_green": {
+			"textures": "textures/blocks/teleporter/side/on/green"
+		},
+		"teleporter_up_green_off": {
+			"textures": "textures/blocks/teleporter/up/off/green"
+		},
+		"teleporter_side_green_off": {
+			"textures": "textures/blocks/teleporter/side/off/green"
 		},
 		"teleporter_down": {
 			"textures": "textures/blocks/teleporter/down"

@@ -2,5 +2,6 @@
 pack.name=Spacon
 pack.description=by Adam Brady
 
-tile.spacon:teleporter_red_off.name=Teleporter Red
-tile.spacon:teleporter_red.name=Teleporter Red
+tile.spacon:teleporter_red_off.name=§cRed Teleporter
+tile.spacon:teleporter_green_off.name=§aGreen Teleporter
+tile.spacon:teleporter_blue_off.name=§9Blue Teleporter

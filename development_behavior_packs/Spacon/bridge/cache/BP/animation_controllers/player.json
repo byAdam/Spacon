@@ -3,7 +3,7 @@
 	"file_type": "animation_controller",
 	"format_version": 1,
 	"file_uuid": "b37075b2_92a8_4de6_8fdb_5e341a71d7d1",
-	"file_version": 24,
+	"file_version": 29,
 	"cache_content": {
 		"open": true,
 		"comment": "",
@@ -103,7 +103,7 @@
 												"meta": {},
 												"children": [
 													{
-														"open": true,
+														"open": false,
 														"comment": "",
 														"data": "",
 														"key": "0",
@@ -111,7 +111,7 @@
 														"meta": {},
 														"children": [
 															{
-																"open": true,
+																"open": false,
 																"comment": "",
 																"data": "query.get_equipped_item_name(0, 0) == 'teleporter_red_off'",
 																"key": "raycast",
@@ -124,10 +124,48 @@
 														]
 													},
 													{
-														"open": true,
+														"open": false,
 														"comment": "",
 														"data": "",
 														"key": "1",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "query.get_equipped_item_name(0, 0) == 'teleporter_green_off'",
+																"key": "raycast",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													},
+													{
+														"open": true,
+														"comment": "",
+														"data": "",
+														"key": "2",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": true,
+																"comment": "",
+																"data": "query.get_equipped_item_name(0, 0) == 'teleporter_blue_off'",
+																"key": "raycast",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													},
+													{
+														"open": false,
+														"comment": "",
+														"data": "",
+														"key": "3",
 														"type": "object",
 														"meta": {},
 														"children": [
@@ -193,6 +231,144 @@
 																"open": false,
 																"comment": "",
 																"data": "!variable.attack_time",
+																"key": "default",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"open": true,
+						"comment": "",
+						"data": "",
+						"key": "controller.animation.player.sneak",
+						"type": "object",
+						"meta": {},
+						"children": [
+							{
+								"open": true,
+								"comment": "",
+								"data": "",
+								"key": "states",
+								"type": "object",
+								"meta": {},
+								"children": [
+									{
+										"open": true,
+										"comment": "",
+										"data": "",
+										"key": "default",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "transitions",
+												"type": "object",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": true,
+																"comment": "",
+																"data": "query.is_sneaking",
+																"key": "sneaking",
+																"type": "string",
+																"meta": {
+																	"is_molang": true
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "on_entry",
+												"type": "object",
+												"meta": {},
+												"children": [
+													{
+														"open": false,
+														"comment": "",
+														"data": "/tag @s remove is_sneaking",
+														"key": "0",
+														"type": "string",
+														"meta": {},
+														"children": []
+													}
+												]
+											}
+										]
+									},
+									{
+										"open": true,
+										"comment": "",
+										"data": "",
+										"key": "sneaking",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "on_entry",
+												"type": "object",
+												"meta": {},
+												"children": [
+													{
+														"open": false,
+														"comment": "",
+														"data": "/tag @s add is_sneaking",
+														"key": "0",
+														"type": "string",
+														"meta": {},
+														"children": []
+													}
+												]
+											},
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "transitions",
+												"type": "array",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": true,
+																"comment": "",
+																"data": "!query.is_sneaking",
 																"key": "default",
 																"type": "string",
 																"meta": {},

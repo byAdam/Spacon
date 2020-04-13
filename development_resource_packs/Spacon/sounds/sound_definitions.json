@@ -1,1 +1,8 @@
-{}
+{
+"spacon.teleporter.run": {
+    "category": "music",
+    "sounds": [
+      "sounds/mob/endermen/portal"
+    ]
+  }
+}

@@ -1,9 +1,9 @@
 {
-	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Spacon/entities/player.json",
+	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Spacon\\entities\\player.json",
 	"file_type": "entity",
 	"format_version": 1,
 	"file_uuid": "d0defcbe_c87e_4f48_a322_3d0c33aaefad",
-	"file_version": 2,
+	"file_version": 6,
 	"cache_content": {
 		"open": true,
 		"comment": "",
@@ -93,6 +93,24 @@
 										"type": "string",
 										"meta": {},
 										"children": []
+									},
+									{
+										"open": false,
+										"comment": "",
+										"data": "animation.player.loop",
+										"key": "loop",
+										"type": "string",
+										"meta": {},
+										"children": []
+									},
+									{
+										"open": false,
+										"comment": "",
+										"data": "controller.animation.player.sneak",
+										"key": "sneak_controller",
+										"type": "string",
+										"meta": {},
+										"children": []
 									}
 								]
 							},
@@ -117,6 +135,24 @@
 												"comment": "",
 												"data": "use_controller",
 												"key": "0",
+												"type": "string",
+												"meta": {},
+												"children": []
+											},
+											{
+												"open": false,
+												"comment": "",
+												"data": "loop",
+												"key": "1",
+												"type": "string",
+												"meta": {},
+												"children": []
+											},
+											{
+												"open": false,
+												"comment": "",
+												"data": "sneak_controller",
+												"key": "2",
 												"type": "string",
 												"meta": {},
 												"children": []

@@ -1,14 +1,29 @@
-//bridge-file-version: #10
+//bridge-file-version: #36
 {
 	"format_version": "1.10.0",
 	"animation_controllers": {
 		"controller.animation.teleporter": {
 			"states": {
 				"default": {
-					"animations": [
+					"transitions": [
 						{
-							"in_block": "(1.0)"
+							"has_color": "query.is_saddled"
 						}
+					]
+				},
+				"despawn": {
+					"on_entry": [
+						"/function spacon/teleporters/despawn"
+					]
+				},
+				"has_color": {
+					"transitions": [
+						{
+							"despawn": "query.is_ignited"
+						}
+					],
+					"on_entry": [
+						"/function spacon/teleporters/save"
 					]
 				}
 			}
@@ -18,13 +33,42 @@
 				"default": {
 					"transitions": [
 						{
-							"red": "query.variant==0"
+							"is_valid": "!query.is_ignited"
 						}
 					]
 				},
 				"red": {
 					"on_entry": [
-						"/setblock ~ ~ ~ teleporter_red"
+						"/setblock ~ ~ ~ teleporter_red",
+						"/tag @s add teleporter_red"
+					]
+				},
+				"is_valid": {
+					"transitions": [
+						{
+							"red": "query.variant==0"
+						},
+						{
+							"green": "query.variant==1"
+						},
+						{
+							"blue": "query.variant==2"
+						}
+					],
+					"on_exit": [
+						"@s spacon:has_color"
+					]
+				},
+				"green": {
+					"on_entry": [
+						"/setblock ~ ~ ~ teleporter_green",
+						"/tag @s add teleporter_green"
+					]
+				},
+				"blue": {
+					"on_entry": [
+						"/setblock ~ ~ ~ teleporter_blue",
+						"/tag @s add teleporter_blue"
 					]
 				}
 			}

@@ -41,8 +41,17 @@
 							"triggers": [
 								{
 									"filters": {
-										"test": "has_tag",
-										"value": "spacon_despawn"
+										"all_of": [
+											{
+												"test": "has_tag",
+												"value": "spacon_despawn"
+											},
+											{
+												"test": "has_component",
+												"value": "minecraft:despawn",
+												"operator": "not"
+											}
+										]
 									},
 									"event": "spacon:despawn"
 								}
@@ -120,5 +129,38 @@
 				}
 			}
 		}
+	},
+	"BP/entities/misc/teleporter_marker_init.json": {
+		"data": {
+			"tag@spacon:marker": {
+				"minecraft:entity": {
+					"description": {},
+					"component_groups": {},
+					"components": {
+						"minecraft:damage_sensor": {
+							"triggers": [
+								{
+									"deals_damage": false
+								}
+							]
+						},
+						"minecraft:scale": {
+							"value": 0
+						},
+						"minecraft:collision_box": {
+							"width": 0,
+							"height": 0
+						}
+					},
+					"events": {}
+				}
+			}
+		}
+	},
+	"RP/entity/raycast.json": {
+		"data": {}
+	},
+	"BP/animations/player.json": {
+		"data": {}
 	}
 }

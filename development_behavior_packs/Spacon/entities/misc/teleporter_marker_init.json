@@ -1,0 +1,68 @@
+//bridge-file-version: #31
+{
+	"minecraft:entity": {
+		"description": {
+			"identifier": "spacon:teleporter_marker_init",
+			"is_summonable": true,
+			"is_spawnable": true,
+			"runtime_identifier": "minecraft:shulker"
+		},
+		"component_groups": {
+			"spacon:teleporter_red": {
+				"minecraft:transformation": {
+					"into": "spacon:teleporter_marker<spacon:teleporter_red>"
+				}
+			},
+			"spacon:teleporter_blue": {
+				"minecraft:transformation": {
+					"into": "spacon:teleporter_marker<spacon:teleporter_blue>"
+				}
+			},
+			"spacon:teleporter_green": {
+				"minecraft:transformation": {
+					"into": "spacon:teleporter_marker<spacon:teleporter_green>"
+				}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:scale": {
+				"value": 0
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			}
+		},
+		"events": {
+			"spacon:teleporter_red": {
+				"add": {
+					"component_groups": [
+						"spacon:teleporter_red"
+					]
+				}
+			},
+			"spacon:teleporter_green": {
+				"add": {
+					"component_groups": [
+						"spacon:teleporter_green"
+					]
+				}
+			},
+			"spacon:teleporter_blue": {
+				"add": {
+					"component_groups": [
+						"spacon:teleporter_blue"
+					]
+				}
+			}
+		}
+	},
+	"format_version": "1.13.0"
+}

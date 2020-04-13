@@ -1,9 +1,9 @@
 {
-	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Spacon/tags/tag_despawn.json",
+	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Spacon\\tags\\tag_despawn.json",
 	"file_type": "entity_tag",
 	"format_version": 1,
 	"file_uuid": "6706aae1_cef8_401c_b760_e4ae22207824",
-	"file_version": 4,
+	"file_version": 5,
 	"cache_content": {
 		"open": true,
 		"comment": "",
@@ -171,24 +171,79 @@
 														"meta": {},
 														"children": [
 															{
-																"open": false,
+																"open": true,
 																"comment": "",
-																"data": "has_tag",
-																"key": "test",
-																"type": "string",
+																"data": "",
+																"key": "all_of",
+																"type": "object",
 																"meta": {},
-																"children": []
-															},
-															{
-																"open": false,
-																"comment": "",
-																"data": "spacon_despawn",
-																"key": "value",
-																"type": "string",
-																"meta": {
-																	"is_value": true
-																},
-																"children": []
+																"children": [
+																	{
+																		"open": true,
+																		"comment": "",
+																		"data": "",
+																		"key": "0",
+																		"type": "object",
+																		"meta": {},
+																		"children": [
+																			{
+																				"open": false,
+																				"comment": "",
+																				"data": "has_tag",
+																				"key": "test",
+																				"type": "string",
+																				"meta": {},
+																				"children": []
+																			},
+																			{
+																				"open": false,
+																				"comment": "",
+																				"data": "spacon_despawn",
+																				"key": "value",
+																				"type": "string",
+																				"meta": {},
+																				"children": []
+																			}
+																		]
+																	},
+																	{
+																		"open": true,
+																		"comment": "",
+																		"data": "",
+																		"key": "1",
+																		"type": "object",
+																		"meta": {},
+																		"children": [
+																			{
+																				"open": false,
+																				"comment": "",
+																				"data": "has_component",
+																				"key": "test",
+																				"type": "string",
+																				"meta": {},
+																				"children": []
+																			},
+																			{
+																				"open": false,
+																				"comment": "",
+																				"data": "minecraft:despawn",
+																				"key": "value",
+																				"type": "string",
+																				"meta": {},
+																				"children": []
+																			},
+																			{
+																				"open": false,
+																				"comment": "",
+																				"data": "not",
+																				"key": "operator",
+																				"type": "string",
+																				"meta": {},
+																				"children": []
+																			}
+																		]
+																	}
+																]
 															}
 														]
 													},

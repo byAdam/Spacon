@@ -1,4 +1,4 @@
-//bridge-file-version: #4
+//bridge-file-version: #5
 {
 	"bridge:tag": {
 		"description": {
@@ -14,8 +14,17 @@
 				"triggers": [
 					{
 						"filters": {
-							"test": "has_tag",
-							"value": "spacon_despawn"
+							"all_of": [
+								{
+									"test": "has_tag",
+									"value": "spacon_despawn"
+								},
+								{
+									"test": "has_component",
+									"value": "minecraft:despawn",
+									"operator": "not"
+								}
+							]
 						},
 						"event": "spacon:despawn"
 					}

@@ -30,7 +30,10 @@
 		},
 		"BP/entities/misc/teleporter_marker.json": {
 			"events": [
-				"spacon:teleporter_red"
+				"spacon:teleporter_red",
+				"spacon:has_color",
+				"spacon:teleporter_green",
+				"spacon:teleporter_blue"
 			],
 			"custom_components": [],
 			"bridge_core_tags": [
@@ -42,7 +45,7 @@
 			],
 			"animation_references": [
 				"controller",
-				"in_block",
+				"loop",
 				"color_controller"
 			],
 			"families": []
@@ -60,7 +63,9 @@
 				"minecraft:player"
 			],
 			"animation_references": [
-				"use_controller"
+				"use_controller",
+				"loop",
+				"sneak_controller"
 			],
 			"families": [
 				"player"
@@ -77,6 +82,22 @@
 			],
 			"animation_references": [],
 			"families": []
+		},
+		"BP/entities/misc/teleporter_marker_init.json": {
+			"events": [
+				"spacon:teleporter_red",
+				"spacon:teleporter_green",
+				"spacon:teleporter_blue"
+			],
+			"custom_components": [],
+			"bridge_core_tags": [
+				"spacon:marker"
+			],
+			"identifiers": [
+				"spacon:teleporter_marker_init"
+			],
+			"animation_references": [],
+			"families": []
 		}
 	},
 	"animation_controller": {
@@ -88,14 +109,20 @@
 		},
 		"BP/animation_controllers/player.json": {
 			"ids": [
-				"controller.animation.player.use"
+				"controller.animation.player.use",
+				"controller.animation.player.sneak"
 			]
 		}
 	},
 	"animation": {
 		"BP/animations/teleporter.json": {
 			"ids": [
-				"animation.teleporter.in_block"
+				"animation.teleporter.loop"
+			]
+		},
+		"BP/animations/player.json": {
+			"ids": [
+				"animation.player.loop"
 			]
 		}
 	},
@@ -126,7 +153,24 @@
 	"client_entity": {
 		"RP/entity/teleporter_marker.json": {
 			"identifiers": [
-				"spacon:teleporter_marker"
+				"spacon:raycast"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/entity/raycast.json": {
+			"identifiers": [
+				"spacon:raycast"
 			],
 			"particle_references": [],
 			"animation_references": [],

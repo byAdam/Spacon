@@ -16,9 +16,40 @@
 	"spacon:teleporter_red_off": {
 		"sound": "metal",
 		"textures": {
-			"up": "teleporter_up_off",
+			"up": "teleporter_up_red_off",
 			"down": "teleporter_down",
-			"side": "teleporter_side_off"
+			"side": "teleporter_side_red_off"
+		}
+	},
+		"spacon:teleporter_green": {
+		"sound": "metal",
+		"textures": {
+			"up": "teleporter_up_green",
+			"down": "teleporter_down",
+			"side": "teleporter_side_green"
+		}
+	},
+	"spacon:teleporter_green_off": {
+		"sound": "metal",
+		"textures": {
+			"up": "teleporter_up_green_off",
+			"down": "teleporter_down",
+			"side": "teleporter_side_green_off"
+		}
+	},	"spacon:teleporter_blue": {
+		"sound": "metal",
+		"textures": {
+			"up": "teleporter_up_blue",
+			"down": "teleporter_down",
+			"side": "teleporter_side_blue"
+		}
+	},
+	"spacon:teleporter_blue_off": {
+		"sound": "metal",
+		"textures": {
+			"up": "teleporter_up_blue_off",
+			"down": "teleporter_down",
+			"side": "teleporter_side_blue_off"
 		}
 	}
 }

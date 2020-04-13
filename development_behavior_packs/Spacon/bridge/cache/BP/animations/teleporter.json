@@ -3,7 +3,7 @@
 	"file_type": "animation",
 	"format_version": 1,
 	"file_uuid": "c4f702ea_97d7_4b2d_9fda_014b0890f1c3",
-	"file_version": 7,
+	"file_version": 17,
 	"cache_content": {
 		"open": true,
 		"comment": "",
@@ -33,7 +33,7 @@
 						"open": true,
 						"comment": "",
 						"data": "",
-						"key": "animation.teleporter.in_block",
+						"key": "animation.teleporter.loop",
 						"type": "object",
 						"meta": {},
 						"children": [
@@ -56,7 +56,7 @@
 											{
 												"open": true,
 												"comment": "",
-												"data": "/execute @s ~ ~ ~ detect ~ ~ ~ air 0 tag @s add spacon_despawn",
+												"data": "/function spacon/teleporters/loop",
 												"key": "0",
 												"type": "string",
 												"meta": {},
