@@ -58,16 +58,13 @@
 				"minecraft:remove_raid_trigger"
 			],
 			"custom_components": [],
-			"bridge_core_tags": [],
+			"bridge_core_tags": [
+				"spacon:player"
+			],
 			"identifiers": [
 				"minecraft:player"
 			],
-			"animation_references": [
-				"phazer_click",
-				"teleporter_click",
-				"loop",
-				"sneak_controller"
-			],
+			"animation_references": [],
 			"families": [
 				"player"
 			]
@@ -152,6 +149,65 @@
 				"fill"
 			],
 			"families": []
+		},
+		"BP/tags/player.json": {
+			"events": [
+				"spacon:update_gravity"
+			],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [],
+			"animation_references": [
+				"use_controller",
+				"teleporter_click",
+				"loop",
+				"sneak_controller",
+				"gravity_controller",
+				"anti_gravity",
+				"anti_gravity_jump"
+			],
+			"families": []
+		},
+		"BP/tags/point_damage.json": {
+			"events": [
+				"spacon:damage_1",
+				"spacon:damage_2",
+				"spacon:damage_3",
+				"spacon:damage_4",
+				"spacon:damage_5",
+				"spacon:damage_6",
+				"spacon:damage_7",
+				"spacon:damage_8",
+				"spacon:damage_9",
+				"spacon:damage_10",
+				"spacon:damage_11",
+				"spacon:damage_12",
+				"spacon:damage_13",
+				"spacon:damage_14",
+				"spacon:damage_15",
+				"spacon:damage_16",
+				"spacon:damage_17",
+				"spacon:damage_18",
+				"spacon:damage_19",
+				"spacon:damage_20"
+			],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [],
+			"animation_references": [],
+			"families": []
+		},
+		"BP/entities/anti_gravity_damage.json": {
+			"events": [],
+			"custom_components": [],
+			"bridge_core_tags": [
+				"spacon:point_damage"
+			],
+			"identifiers": [
+				"spacon:anti_gravity_damage"
+			],
+			"animation_references": [],
+			"families": []
 		}
 	},
 	"animation_controller": {
@@ -164,8 +220,9 @@
 		"BP/animation_controllers/player.json": {
 			"ids": [
 				"controller.animation.player.click.teleporter",
-				"controller.animation.player.click.phazer",
-				"controller.animation.player.sneak"
+				"controller.animation.player.use",
+				"controller.animation.player.sneak",
+				"controller.animation.player.gravity"
 			]
 		},
 		"BP/animation_controllers/gen.json": {
@@ -184,7 +241,9 @@
 		},
 		"BP/animations/player.json": {
 			"ids": [
-				"animation.player.loop"
+				"animation.player.loop",
+				"animation.player.anti_gravity",
+				"animation.player.anti_gravity_jump"
 			]
 		},
 		"BP/animations/gen.json": {
@@ -204,6 +263,16 @@
 		"BP/tags/marker.json": {
 			"identifiers": [
 				"spacon:marker"
+			]
+		},
+		"BP/tags/player.json": {
+			"identifiers": [
+				"spacon:player"
+			]
+		},
+		"BP/tags/point_damage.json": {
+			"identifiers": [
+				"spacon:point_damage"
 			]
 		}
 	},
@@ -227,7 +296,7 @@
 	"client_entity": {
 		"RP/entity/teleporter_marker.json": {
 			"identifiers": [
-				"spacon:raycast"
+				"spacon:anti_gravity_marker"
 			],
 			"particle_references": [],
 			"animation_references": [],
@@ -258,6 +327,96 @@
 			"geometry_references": [
 				"default"
 			]
+		},
+		"RP/entity/player.json": {
+			"identifiers": [
+				"minecraft:player"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"root",
+				"base_controller",
+				"hudplayer",
+				"humanoid_base_pose",
+				"look_at_target",
+				"look_at_target_ui",
+				"look_at_target_default",
+				"look_at_target_gliding",
+				"look_at_target_swimming",
+				"look_at_target_inverted",
+				"cape",
+				"move.arms",
+				"move.legs",
+				"swimming",
+				"swimming.legs",
+				"riding.arms",
+				"riding.legs",
+				"holding",
+				"brandish_spear",
+				"charging",
+				"attack.positions",
+				"attack.rotations",
+				"sneaking",
+				"bob",
+				"damage_nearby_mobs",
+				"bow_and_arrow",
+				"use_item_progress",
+				"skeleton_attack",
+				"sleeping",
+				"first_person_base_pose",
+				"first_person_empty_hand",
+				"first_person_swap_item",
+				"first_person_attack_controller",
+				"first_person_attack_rotation",
+				"first_person_vr_attack_rotation",
+				"first_person_walk",
+				"first_person_map_controller",
+				"first_person_map_hold",
+				"first_person_map_hold_attack",
+				"first_person_map_hold_off_hand",
+				"first_person_map_hold_main_hand",
+				"first_person_crossbow_equipped",
+				"third_person_crossbow_equipped",
+				"third_person_bow_equipped",
+				"crossbow_hold",
+				"crossbow_controller",
+				"shield_block_main_hand",
+				"shield_block_off_hand",
+				"blink",
+				"gravity_controller",
+				"anti_gravity"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"cape"
+			],
+			"material_references": [
+				"default",
+				"cape",
+				"animated"
+			],
+			"geometry_references": [
+				"default",
+				"cape"
+			]
+		},
+		"RP/entity/anti_gravity_marker.json": {
+			"identifiers": [
+				"spacon:anti_gravity_marker"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
 		}
 	},
 	"item": {
@@ -268,12 +427,31 @@
 		},
 		"BP/items/phazer.json": {
 			"identifiers": [
-				"spacon:phazer"
+				"spacon:gravilever"
 			]
 		},
 		"BP/items/cancel_use.json": {
 			"identifiers": [
 				"spacon:cancel_use"
+			]
+		},
+		"BP/items/gravilever.json": {
+			"identifiers": [
+				"spacon:gravilever"
+			]
+		}
+	},
+	"rp_animation_controller": {
+		"RP/animation_controllers/spacon_player.json": {
+			"ids": [
+				"controller.animation.player.gravity"
+			]
+		}
+	},
+	"rp_animation": {
+		"RP/animations/spacon_player.json": {
+			"ids": [
+				"animation.player.anti_gravity"
 			]
 		}
 	}

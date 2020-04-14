@@ -1,4 +1,4 @@
-//bridge-file-version: #103
+//bridge-file-version: #143
 {
 	"format_version": "1.10.0",
 	"animation_controllers": {
@@ -39,7 +39,7 @@
 				}
 			}
 		},
-		"controller.animation.player.click.phazer": {
+		"controller.animation.player.use": {
 			"states": {
 				"default": {
 					"transitions": [
@@ -49,16 +49,39 @@
 					]
 				},
 				"use": {
+					"transitions": [
+						{
+							"phazer": "query.get_equipped_item_name(0, 0) == 'phazer'"
+						},
+						{
+							"gravilever": "query.get_equipped_item_name(0, 0) == 'gravilever'"
+						}
+					]
+				},
+				"phazer": {
 					"on_entry": [
 						"/function spacon/items/phazer"
+					],
+					"on_exit": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 spacon:phazer"
 					],
 					"transitions": [
 						{
 							"default": "query.item_remaining_use_duration <= 0"
 						}
+					]
+				},
+				"gravilever": {
+					"on_entry": [
+						"/function spacon/items/gravilever"
 					],
 					"on_exit": [
-						"/replaceitem entity @s slot.weapon.mainhand 0 spacon:phazer"
+						"/replaceitem entity @s slot.weapon.mainhand 0 spacon:gravilever"
+					],
+					"transitions": [
+						{
+							"default": "query.item_remaining_use_duration <= 0"
+						}
 					]
 				}
 			}
@@ -82,6 +105,48 @@
 					"transitions": [
 						{
 							"default": "!query.is_sneaking"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.gravity": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"anti_gravity": "query.is_ignited"
+						}
+					]
+				},
+				"anti_gravity": {
+					"animations": [
+						{
+							"anti_gravity": "(1.0)"
+						}
+					],
+					"transitions": [
+						{
+							"default": "!query.is_ignited"
+						},
+						{
+							"anti_gravity_jump": "query.is_jumping"
+						}
+					],
+					"on_exit": [
+						"/effect @s levitation 0",
+						"/effect @s haste 0"
+					]
+				},
+				"anti_gravity_jump": {
+					"transitions": [
+						{
+							"anti_gravity": "query.any_animation_finished && (!query.is_jumping || !query.is_ignited)"
+						}
+					],
+					"animations": [
+						{
+							"anti_gravity_jump": "(1.0)"
 						}
 					]
 				}

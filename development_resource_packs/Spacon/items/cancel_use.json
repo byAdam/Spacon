@@ -1,0 +1,13 @@
+//bridge-file-version: #10
+{
+	"format_version": 1.1,
+	"minecraft:item": {
+		"description": {
+			"identifier": "spacon:cancel_use",
+			"category": "Equipment"
+		},
+		"components": {
+			"minecraft:icon": "none"
+		}
+	}
+}

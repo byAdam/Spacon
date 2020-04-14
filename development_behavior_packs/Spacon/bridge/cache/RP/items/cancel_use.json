@@ -1,9 +1,9 @@
 {
-	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_resource_packs\\Spacon\\textures\\item_texture.json",
-	"file_type": "item_texture",
+	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_resource_packs\\Spacon\\items\\cancel_use.json",
+	"file_type": "client_item",
 	"format_version": 1,
-	"file_uuid": "6204bb2c_42fd_473e_84c1_7211e5a0fed1",
-	"file_version": 5,
+	"file_uuid": "64655071_6ea0_4103_8887_52410556e883",
+	"file_version": 10,
 	"cache_content": {
 		"open": true,
 		"comment": "",
@@ -15,17 +15,8 @@
 			{
 				"open": false,
 				"comment": "",
-				"data": "bridgeRP",
-				"key": "resource_pack_name",
-				"type": "string",
-				"meta": {},
-				"children": []
-			},
-			{
-				"open": false,
-				"comment": "",
-				"data": "atlas.items",
-				"key": "texture_name",
+				"data": "1.10",
+				"key": "format_version",
 				"type": "string",
 				"meta": {},
 				"children": []
@@ -34,7 +25,7 @@
 				"open": true,
 				"comment": "",
 				"data": "",
-				"key": "texture_data",
+				"key": "minecraft:item",
 				"type": "object",
 				"meta": {},
 				"children": [
@@ -42,15 +33,24 @@
 						"open": true,
 						"comment": "",
 						"data": "",
-						"key": "phazer",
+						"key": "description",
 						"type": "object",
 						"meta": {},
 						"children": [
 							{
 								"open": true,
 								"comment": "",
-								"data": "textures/items/phazer",
-								"key": "textures",
+								"data": "spacon:cancel_use",
+								"key": "identifier",
+								"type": "string",
+								"meta": {},
+								"children": []
+							},
+							{
+								"open": true,
+								"comment": "",
+								"data": "Equipment",
+								"key": "category",
 								"type": "string",
 								"meta": {},
 								"children": []
@@ -61,34 +61,15 @@
 						"open": true,
 						"comment": "",
 						"data": "",
-						"key": "gravilever",
+						"key": "components",
 						"type": "object",
 						"meta": {},
 						"children": [
 							{
-								"open": false,
+								"open": true,
 								"comment": "",
-								"data": "textures/items/gravilever",
-								"key": "textures",
-								"type": "string",
-								"meta": {},
-								"children": []
-							}
-						]
-					},
-					{
-						"open": true,
-						"comment": "",
-						"data": "",
-						"key": "none",
-						"type": "object",
-						"meta": {},
-						"children": [
-							{
-								"open": false,
-								"comment": "",
-								"data": "textures/items/none",
-								"key": "textures",
+								"data": "none",
+								"key": "minecraft:icon",
 								"type": "string",
 								"meta": {},
 								"children": []

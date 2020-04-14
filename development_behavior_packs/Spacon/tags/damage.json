@@ -1,0 +1,10 @@
+{
+	"bridge:tag": {
+		"description": {
+			"identifier": ""
+		},
+		"component_groups": {},
+		"components": {},
+		"events": {}
+	}
+}

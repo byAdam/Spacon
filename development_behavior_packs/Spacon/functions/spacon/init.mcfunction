@@ -4,6 +4,8 @@ scoreboard objectives add spacon_z dummy
 
 scoreboard objectives add spacon_gen_ttl dummy
 
+scoreboard objectives add agravity_fall dummy
+
 scoreboard objectives add spacon_digit dummy
 scoreboard objectives add spacon_digit_1 dummy
 scoreboard objectives add spacon_digit_2 dummy
@@ -22,6 +24,8 @@ scoreboard objectives add spacon_tper_tmp dummy
 scoreboard objectives add spacon_buffer dummy
 scoreboard objectives add const dummy
 
+scoreboard players set nm1 const -1
+scoreboard players set n2 const 2
 scoreboard players set n10 const 10
 scoreboard players set n100 const 100
 scoreboard players set n1000 const 1000

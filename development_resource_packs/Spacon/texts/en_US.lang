@@ -7,3 +7,6 @@ tile.spacon:teleporter_green_off.name=§aGreen Teleporter
 tile.spacon:teleporter_blue_off.name=§9Blue Teleporter
 
 item.spacon:phazer.name=Phazer
+item.spacon:gravilever.name=Gravilever
+
+entity.spacon:anti_gravity_damage.name=fall damage

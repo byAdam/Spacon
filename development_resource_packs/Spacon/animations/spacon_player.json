@@ -1,0 +1,19 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.player.anti_gravity": {
+			"animation_length": 0.5,
+			"loop": true,
+			"bones": {
+				"root": {
+					"position" : [ 0.0, 30.0, 0.0 ],
+					"rotation": [0,0,180]
+				},
+				"head" : {
+					"rotation": [0,0, 180]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.player.gravity": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"anti_gravity": "query.is_ignited"
+						}
+					]
+				},
+				"anti_gravity": {
+					"transitions": [
+						{
+							"default": "!query.is_ignited"
+						}
+					],
+					"animations": [
+						{
+							"anti_gravity": "(1.0)"
+						}
+					]
+				}
+			}
+		}
+	}
+}
