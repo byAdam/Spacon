@@ -1,0 +1,33 @@
+//bridge-file-version: #44
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.gen.box_fill": {
+			"animation_length": 0.05,
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/function spacon/gen/fill_loop"
+				]
+			}
+		},
+		"animation.gen.box_hollow": {
+			"timeline": {
+				"0.0": [
+					"/function spacon/gen/hollow_loop"
+				]
+			},
+			"animation_length": 0.05,
+			"loop": true
+		},
+		"animation.gen.box_loop": {
+			"timeline": {
+				"0.0": [
+					"/execute @s ~-60 0 ~-60 kill @e[dx=121,dy=3,dz=121]"
+				]
+			},
+			"animation_length": 0.05,
+			"loop": true
+		}
+	}
+}

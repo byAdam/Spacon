@@ -1,8 +1,8 @@
-//bridge-file-version: #29
+//bridge-file-version: #103
 {
 	"format_version": "1.10.0",
 	"animation_controllers": {
-		"controller.animation.player.use": {
+		"controller.animation.player.click.teleporter": {
 			"states": {
 				"default": {
 					"transitions": [
@@ -35,6 +35,30 @@
 						{
 							"default": "!variable.attack_time"
 						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.click.phazer": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"use": "query.item_remaining_use_duration > 0 && (query.item_remaining_use_duration/query.item_max_use_duration) < 0.5"
+						}
+					]
+				},
+				"use": {
+					"on_entry": [
+						"/function spacon/items/phazer"
+					],
+					"transitions": [
+						{
+							"default": "query.item_remaining_use_duration <= 0"
+						}
+					],
+					"on_exit": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 spacon:phazer"
 					]
 				}
 			}

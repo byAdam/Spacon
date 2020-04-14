@@ -63,7 +63,8 @@
 				"minecraft:player"
 			],
 			"animation_references": [
-				"use_controller",
+				"phazer_click",
+				"teleporter_click",
 				"loop",
 				"sneak_controller"
 			],
@@ -98,6 +99,59 @@
 			],
 			"animation_references": [],
 			"families": []
+		},
+		"BP/entities/gen/planet_marker.json": {
+			"events": [
+				"minecraft:entity_spawned",
+				"spacon:generate_planet"
+			],
+			"custom_components": [],
+			"bridge_core_tags": [
+				"spacon:marker"
+			],
+			"identifiers": [
+				"spacon:planet_marker"
+			],
+			"animation_references": [
+				"gen_controller",
+				"box_loop",
+				"planet_controller"
+			],
+			"families": []
+		},
+		"BP/entities/gen/box_builder.json/world_destroyer.json": {
+			"events": [
+				"spacon:hollow"
+			],
+			"custom_components": [],
+			"bridge_core_tags": [
+				"spacon:marker"
+			],
+			"identifiers": [
+				"spacon:box_builder"
+			],
+			"animation_references": [
+				"controller",
+				"hollow",
+				"fill"
+			],
+			"families": []
+		},
+		"BP/entities/gen/box_builder.json": {
+			"events": [
+				"spacon:hollow"
+			],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"spacon:box_builder"
+			],
+			"animation_references": [
+				"controller",
+				"hollow",
+				"fill"
+			],
+			"families": []
 		}
 	},
 	"animation_controller": {
@@ -109,8 +163,16 @@
 		},
 		"BP/animation_controllers/player.json": {
 			"ids": [
-				"controller.animation.player.use",
+				"controller.animation.player.click.teleporter",
+				"controller.animation.player.click.phazer",
 				"controller.animation.player.sneak"
+			]
+		},
+		"BP/animation_controllers/gen.json": {
+			"ids": [
+				"controller.animation.gen.box",
+				"controller.animation.gen",
+				"controller.animation.planet"
 			]
 		}
 	},
@@ -123,6 +185,13 @@
 		"BP/animations/player.json": {
 			"ids": [
 				"animation.player.loop"
+			]
+		},
+		"BP/animations/gen.json": {
+			"ids": [
+				"animation.gen.box_fill",
+				"animation.gen.box_hollow",
+				"animation.gen.box_loop"
 			]
 		}
 	},
@@ -147,6 +216,11 @@
 		"BP/blocks/teleporter_blank.json": {
 			"identifiers": [
 				"spacon:teleporter_red_off"
+			]
+		},
+		"BP/blocks/void.json": {
+			"identifiers": [
+				"spacon:void"
 			]
 		}
 	},
@@ -183,6 +257,23 @@
 			],
 			"geometry_references": [
 				"default"
+			]
+		}
+	},
+	"item": {
+		"BP/items/spacon:phazer.json": {
+			"identifiers": [
+				"spacon:phazer"
+			]
+		},
+		"BP/items/phazer.json": {
+			"identifiers": [
+				"spacon:phazer"
+			]
+		},
+		"BP/items/cancel_use.json": {
+			"identifiers": [
+				"spacon:cancel_use"
 			]
 		}
 	}

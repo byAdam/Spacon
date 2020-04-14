@@ -1,0 +1,89 @@
+//bridge-file-version: #49
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.gen.box": {
+			"states": {
+				"hollow": {
+					"animations": [
+						{
+							"hollow": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/tp @s ~ ~-2 ~"
+					]
+				},
+				"fill": {
+					"animations": [
+						{
+							"fill": "(1.0)"
+						}
+					],
+					"transitions": [
+						{
+							"hollow": "query.is_ignited"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"fill": "(1.0)"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.gen": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"generate_box": "query.variant == 0"
+						},
+						{
+							"generate_planet": "query.variant == 1"
+						}
+					]
+				},
+				"generate_box": {
+					"on_entry": [
+						"/summon spacon:box_builder ~ -1 ~"
+					],
+					"on_exit": [
+						"/say exit"
+					],
+					"transitions": [
+						{
+							"default": "query.variant != 0"
+						}
+					]
+				},
+				"generate_planet": {
+					"on_entry": [
+						"/say gen planet"
+					]
+				}
+			}
+		},
+		"controller.animation.planet": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"box_generated": "query.variant != 0"
+						}
+					]
+				},
+				"box_generated": {
+					"animations": [
+						{
+							"box_loop": "(1.0)"
+						}
+					]
+				}
+			}
+		}
+	}
+}

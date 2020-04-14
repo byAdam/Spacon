@@ -3,7 +3,7 @@
 	"file_type": "entity",
 	"format_version": 1,
 	"file_uuid": "d0defcbe_c87e_4f48_a322_3d0c33aaefad",
-	"file_version": 6,
+	"file_version": 16,
 	"cache_content": {
 		"open": true,
 		"comment": "",
@@ -88,14 +88,23 @@
 									{
 										"open": false,
 										"comment": "",
-										"data": "controller.animation.player.use",
-										"key": "use_controller",
+										"data": "controller.animation.player.click.phazer",
+										"key": "phazer_click",
 										"type": "string",
 										"meta": {},
 										"children": []
 									},
 									{
-										"open": false,
+										"open": true,
+										"comment": "",
+										"data": "controller.animation.player.click.teleporter",
+										"key": "teleporter_click",
+										"type": "string",
+										"meta": {},
+										"children": []
+									},
+									{
+										"open": true,
 										"comment": "",
 										"data": "animation.player.loop",
 										"key": "loop",
@@ -131,18 +140,18 @@
 										"meta": {},
 										"children": [
 											{
-												"open": false,
+												"open": true,
 												"comment": "",
-												"data": "use_controller",
+												"data": "teleporter_click",
 												"key": "0",
 												"type": "string",
 												"meta": {},
 												"children": []
 											},
 											{
-												"open": false,
+												"open": true,
 												"comment": "",
-												"data": "loop",
+												"data": "phazer_click",
 												"key": "1",
 												"type": "string",
 												"meta": {},
@@ -151,8 +160,17 @@
 											{
 												"open": false,
 												"comment": "",
-												"data": "sneak_controller",
+												"data": "loop",
 												"key": "2",
+												"type": "string",
+												"meta": {},
+												"children": []
+											},
+											{
+												"open": false,
+												"comment": "",
+												"data": "sneak_controller",
+												"key": "3",
 												"type": "string",
 												"meta": {},
 												"children": []

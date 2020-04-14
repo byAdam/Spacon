@@ -1,5 +1,10 @@
+//bridge-file-version: #3
 {
-  "resource_pack_name": "bridgeRP",
-  "texture_name": "atlas.items",
-  "texture_data": {}
+	"resource_pack_name": "bridgeRP",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"phazer": {
+			"textures": "textures/items/phazer"
+		}
+	}
 }

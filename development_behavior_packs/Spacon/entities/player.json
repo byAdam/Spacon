@@ -1,4 +1,4 @@
-//bridge-file-version: #6
+//bridge-file-version: #16
 {
 	"format_version": "1.13.0",
 	"minecraft:entity": {
@@ -8,13 +8,15 @@
 			"is_summonable": false,
 			"is_experimental": false,
 			"animations": {
-				"use_controller": "controller.animation.player.use",
+				"phazer_click": "controller.animation.player.click.phazer",
+				"teleporter_click": "controller.animation.player.click.teleporter",
 				"loop": "animation.player.loop",
 				"sneak_controller": "controller.animation.player.sneak"
 			},
 			"scripts": {
 				"animate": [
-					"use_controller",
+					"teleporter_click",
+					"phazer_click",
 					"loop",
 					"sneak_controller"
 				]

@@ -43,6 +43,10 @@
 		},
 		"teleporter_down": {
 			"textures": "textures/blocks/teleporter/down"
+		},
+		"void":
+		{
+			"textures": "textures/blocks/void"
 		}
 	}
 }

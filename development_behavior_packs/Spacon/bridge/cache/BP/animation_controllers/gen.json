@@ -1,9 +1,9 @@
 {
-	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Spacon\\animation_controllers\\player.json",
+	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Spacon\\animation_controllers\\gen.json",
 	"file_type": "animation_controller",
 	"format_version": 1,
-	"file_uuid": "b37075b2_92a8_4de6_8fdb_5e341a71d7d1",
-	"file_version": 103,
+	"file_uuid": "e15cb568_e293_430b_aa44_0fb4dd6eeaca",
+	"file_version": 49,
 	"cache_content": {
 		"open": true,
 		"comment": "",
@@ -30,10 +30,199 @@
 				"meta": {},
 				"children": [
 					{
-						"open": false,
+						"open": true,
 						"comment": "",
 						"data": "",
-						"key": "controller.animation.player.click.teleporter",
+						"key": "controller.animation.gen.box",
+						"type": "object",
+						"meta": {},
+						"children": [
+							{
+								"open": true,
+								"comment": "",
+								"data": "",
+								"key": "states",
+								"type": "object",
+								"meta": {},
+								"children": [
+									{
+										"open": true,
+										"comment": "",
+										"data": "",
+										"key": "hollow",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "animations",
+												"type": "object",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": true,
+																"comment": "",
+																"data": "(1.0)",
+																"key": "hollow",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "on_entry",
+												"type": "object",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "/tp @s ~ ~-2 ~",
+														"key": "0",
+														"type": "string",
+														"meta": {},
+														"children": []
+													}
+												]
+											}
+										]
+									},
+									{
+										"open": false,
+										"comment": "",
+										"data": "",
+										"key": "fill",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "animations",
+												"type": "object",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "(1.0)",
+																"key": "fill",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "transitions",
+												"type": "object",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "query.is_ignited",
+																"key": "hollow",
+																"type": "string",
+																"meta": {
+																	"is_molang": true
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"open": true,
+										"comment": "",
+										"data": "",
+										"key": "default",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "transitions",
+												"type": "object",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "(1.0)",
+																"key": "fill",
+																"type": "string",
+																"meta": {
+																	"is_molang": true
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"open": true,
+						"comment": "",
+						"data": "",
+						"key": "controller.animation.gen",
 						"type": "object",
 						"meta": {},
 						"children": [
@@ -70,51 +259,10 @@
 														"meta": {},
 														"children": [
 															{
-																"open": false,
+																"open": true,
 																"comment": "",
-																"data": "variable.attack_time",
-																"key": "on_use",
-																"type": "string",
-																"meta": {
-																	"is_molang": true
-																},
-																"children": []
-															}
-														]
-													}
-												]
-											}
-										]
-									},
-									{
-										"open": true,
-										"comment": "",
-										"data": "",
-										"key": "on_use",
-										"type": "object",
-										"meta": {},
-										"children": [
-											{
-												"open": true,
-												"comment": "",
-												"data": "",
-												"key": "transitions",
-												"type": "object",
-												"meta": {},
-												"children": [
-													{
-														"open": true,
-														"comment": "",
-														"data": "",
-														"key": "0",
-														"type": "object",
-														"meta": {},
-														"children": [
-															{
-																"open": false,
-																"comment": "",
-																"data": "query.get_equipped_item_name(0, 0) == 'teleporter_red_off'",
-																"key": "raycast",
+																"data": "query.variant == 0",
+																"key": "generate_box",
 																"type": "string",
 																"meta": {
 																	"is_molang": true
@@ -134,48 +282,12 @@
 															{
 																"open": false,
 																"comment": "",
-																"data": "query.get_equipped_item_name(0, 0) == 'teleporter_green_off'",
-																"key": "raycast",
+																"data": "query.variant == 1",
+																"key": "generate_planet",
 																"type": "string",
-																"meta": {},
-																"children": []
-															}
-														]
-													},
-													{
-														"open": true,
-														"comment": "",
-														"data": "",
-														"key": "2",
-														"type": "object",
-														"meta": {},
-														"children": [
-															{
-																"open": true,
-																"comment": "",
-																"data": "query.get_equipped_item_name(0, 0) == 'teleporter_blue_off'",
-																"key": "raycast",
-																"type": "string",
-																"meta": {},
-																"children": []
-															}
-														]
-													},
-													{
-														"open": true,
-														"comment": "",
-														"data": "",
-														"key": "3",
-														"type": "object",
-														"meta": {},
-														"children": [
-															{
-																"open": false,
-																"comment": "",
-																"data": "!variable.attack_time",
-																"key": "default",
-																"type": "string",
-																"meta": {},
+																"meta": {
+																	"is_molang": true
+																},
 																"children": []
 															}
 														]
@@ -188,7 +300,7 @@
 										"open": true,
 										"comment": "",
 										"data": "",
-										"key": "raycast",
+										"key": "generate_box",
 										"type": "object",
 										"meta": {},
 										"children": [
@@ -197,167 +309,17 @@
 												"comment": "",
 												"data": "",
 												"key": "on_entry",
-												"type": "object",
-												"meta": {},
-												"children": [
-													{
-														"open": true,
-														"comment": "",
-														"data": "/function spacon/misc/raycast",
-														"key": "0",
-														"type": "string",
-														"meta": {},
-														"children": []
-													}
-												]
-											},
-											{
-												"open": true,
-												"comment": "",
-												"data": "",
-												"key": "transitions",
 												"type": "array",
 												"meta": {},
 												"children": [
 													{
 														"open": true,
 														"comment": "",
-														"data": "",
-														"key": "0",
-														"type": "object",
-														"meta": {},
-														"children": [
-															{
-																"open": false,
-																"comment": "",
-																"data": "!variable.attack_time",
-																"key": "default",
-																"type": "string",
-																"meta": {},
-																"children": []
-															}
-														]
-													}
-												]
-											}
-										]
-									}
-								]
-							}
-						]
-					},
-					{
-						"open": false,
-						"comment": "",
-						"data": "",
-						"key": "controller.animation.player.click.phazer",
-						"type": "object",
-						"meta": {},
-						"children": [
-							{
-								"open": true,
-								"comment": "",
-								"data": "",
-								"key": "states",
-								"type": "object",
-								"meta": {},
-								"children": [
-									{
-										"open": true,
-										"comment": "",
-										"data": "",
-										"key": "default",
-										"type": "object",
-										"meta": {},
-										"children": [
-											{
-												"open": true,
-												"comment": "",
-												"data": "",
-												"key": "transitions",
-												"type": "object",
-												"meta": {},
-												"children": [
-													{
-														"open": true,
-														"comment": "",
-														"data": "",
-														"key": "0",
-														"type": "object",
-														"meta": {},
-														"children": [
-															{
-																"open": true,
-																"comment": "",
-																"data": "query.item_remaining_use_duration > 0 && (query.item_remaining_use_duration/query.item_max_use_duration) < 0.5",
-																"key": "use",
-																"type": "string",
-																"meta": {
-																	"is_molang": true
-																},
-																"children": []
-															}
-														]
-													}
-												]
-											}
-										]
-									},
-									{
-										"open": true,
-										"comment": "",
-										"data": "",
-										"key": "use",
-										"type": "object",
-										"meta": {},
-										"children": [
-											{
-												"open": true,
-												"comment": "",
-												"data": "",
-												"key": "on_entry",
-												"type": "object",
-												"meta": {},
-												"children": [
-													{
-														"open": true,
-														"comment": "",
-														"data": "/function spacon/items/phazer",
+														"data": "/summon spacon:box_builder ~ -1 ~",
 														"key": "0",
 														"type": "string",
 														"meta": {},
 														"children": []
-													}
-												]
-											},
-											{
-												"open": true,
-												"comment": "",
-												"data": "",
-												"key": "transitions",
-												"type": "object",
-												"meta": {},
-												"children": [
-													{
-														"open": true,
-														"comment": "",
-														"data": "",
-														"key": "0",
-														"type": "object",
-														"meta": {},
-														"children": [
-															{
-																"open": true,
-																"comment": "",
-																"data": "query.item_remaining_use_duration <= 0",
-																"key": "default",
-																"type": "string",
-																"meta": {
-																	"is_molang": true
-																},
-																"children": []
-															}
-														]
 													}
 												]
 											},
@@ -370,46 +332,16 @@
 												"meta": {},
 												"children": [
 													{
-														"open": true,
+														"open": false,
 														"comment": "",
-														"data": "/replaceitem entity @s slot.weapon.mainhand 0 spacon:phazer",
+														"data": "/say exit",
 														"key": "0",
 														"type": "string",
 														"meta": {},
 														"children": []
 													}
 												]
-											}
-										]
-									}
-								]
-							}
-						]
-					},
-					{
-						"open": false,
-						"comment": "",
-						"data": "",
-						"key": "controller.animation.player.sneak",
-						"type": "object",
-						"meta": {},
-						"children": [
-							{
-								"open": true,
-								"comment": "",
-								"data": "",
-								"key": "states",
-								"type": "object",
-								"meta": {},
-								"children": [
-									{
-										"open": true,
-										"comment": "",
-										"data": "",
-										"key": "default",
-										"type": "object",
-										"meta": {},
-										"children": [
+											},
 											{
 												"open": true,
 												"comment": "",
@@ -427,10 +359,10 @@
 														"meta": {},
 														"children": [
 															{
-																"open": true,
+																"open": false,
 																"comment": "",
-																"data": "query.is_sneaking",
-																"key": "sneaking",
+																"data": "query.variant != 0",
+																"key": "default",
 																"type": "string",
 																"meta": {
 																	"is_molang": true
@@ -440,25 +372,6 @@
 														]
 													}
 												]
-											},
-											{
-												"open": true,
-												"comment": "",
-												"data": "",
-												"key": "on_entry",
-												"type": "object",
-												"meta": {},
-												"children": [
-													{
-														"open": true,
-														"comment": "",
-														"data": "/tag @s remove is_sneaking",
-														"key": "0",
-														"type": "string",
-														"meta": {},
-														"children": []
-													}
-												]
 											}
 										]
 									},
@@ -466,7 +379,7 @@
 										"open": true,
 										"comment": "",
 										"data": "",
-										"key": "sneaking",
+										"key": "generate_planet",
 										"type": "object",
 										"meta": {},
 										"children": [
@@ -481,20 +394,50 @@
 													{
 														"open": false,
 														"comment": "",
-														"data": "/tag @s add is_sneaking",
+														"data": "/say gen planet",
 														"key": "0",
 														"type": "string",
 														"meta": {},
 														"children": []
 													}
 												]
-											},
+											}
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"open": true,
+						"comment": "",
+						"data": "",
+						"key": "controller.animation.planet",
+						"type": "object",
+						"meta": {},
+						"children": [
+							{
+								"open": true,
+								"comment": "",
+								"data": "",
+								"key": "states",
+								"type": "object",
+								"meta": {},
+								"children": [
+									{
+										"open": true,
+										"comment": "",
+										"data": "",
+										"key": "default",
+										"type": "object",
+										"meta": {},
+										"children": [
 											{
 												"open": true,
 												"comment": "",
 												"data": "",
 												"key": "transitions",
-												"type": "array",
+												"type": "object",
 												"meta": {},
 												"children": [
 													{
@@ -506,10 +449,51 @@
 														"meta": {},
 														"children": [
 															{
-																"open": true,
+																"open": false,
 																"comment": "",
-																"data": "!query.is_sneaking",
-																"key": "default",
+																"data": "query.variant != 0",
+																"key": "box_generated",
+																"type": "string",
+																"meta": {
+																	"is_molang": true
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"open": true,
+										"comment": "",
+										"data": "",
+										"key": "box_generated",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "animations",
+												"type": "object",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "(1.0)",
+																"key": "box_loop",
 																"type": "string",
 																"meta": {},
 																"children": []

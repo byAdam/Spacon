@@ -162,5 +162,86 @@
 	},
 	"BP/animations/player.json": {
 		"data": {}
+	},
+	"BP/animation_controllers/gen.json": {
+		"data": {}
+	},
+	"BP/animations/gen.json": {
+		"data": {}
+	},
+	"BP/blocks/void.json": {
+		"data": {}
+	},
+	"BP/entities/gen/planet_marker.json": {
+		"data": {
+			"tag@spacon:marker": {
+				"minecraft:entity": {
+					"description": {},
+					"component_groups": {},
+					"components": {
+						"minecraft:damage_sensor": {
+							"triggers": [
+								{
+									"deals_damage": false
+								}
+							]
+						},
+						"minecraft:scale": {
+							"value": 0
+						},
+						"minecraft:collision_box": {
+							"width": 0,
+							"height": 0
+						}
+					},
+					"events": {}
+				}
+			}
+		}
+	},
+	"BP/entities/gen/box_builder.json/world_destroyer.json": {
+		"data": {
+			"tag@spacon:marker": {
+				"minecraft:entity": {
+					"description": {},
+					"component_groups": {},
+					"components": {
+						"minecraft:damage_sensor": {
+							"triggers": [
+								{
+									"deals_damage": false
+								}
+							]
+						},
+						"minecraft:scale": {
+							"value": 0
+						},
+						"minecraft:collision_box": {
+							"width": 0,
+							"height": 0
+						}
+					},
+					"events": {}
+				}
+			}
+		}
+	},
+	"BP/entities/gen/box_builder.json": {
+		"data": {}
+	},
+	"BP/items/spacon:phazer.json": {
+		"data": {}
+	},
+	"BP/items/phazer.json": {
+		"data": {}
+	},
+	"RP/items/phazer.json": {
+		"data": {}
+	},
+	"RP/textures/item_texture.json": {
+		"data": {}
+	},
+	"BP/items/cancel_use.json": {
+		"data": {}
 	}
 }

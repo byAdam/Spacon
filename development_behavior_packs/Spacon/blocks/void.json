@@ -1,0 +1,21 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.10.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "spacon:void",
+			"register_to_creative_menu": false
+		},
+		"components": {
+			"minecraft:destroy_time": {
+				"value": 1e+32
+			},
+			"minecraft:explosion_resistance": {
+				"value": 3600000
+			},
+			"minecraft:block_light_emission": {
+				"emission": 1
+			}
+		}
+	}
+}

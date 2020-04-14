@@ -51,5 +51,9 @@
 			"down": "teleporter_down",
 			"side": "teleporter_side_blue_off"
 		}
+	},
+	"spacon:void":
+	{
+		"textures":"void"
 	}
 }
