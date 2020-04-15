@@ -11,6 +11,9 @@ execute @s ~ ~ ~ detect ~ ~1.8 ~ slime 0 scoreboard players set @s anti_gravity_
 execute @s ~ ~ ~ detect ~ ~1.8 ~ web 0 scoreboard players set @s anti_gravity_damage -1
 execute @s ~ ~ ~ detect ~ ~1.8 ~ vine 0 scoreboard players set @s anti_gravity_damage -1
 
+playsound damage.fallsmall @s[scores={agravity_fall=1..4}]
+playsound damage.fallbig @s[scores={agravity_fall=5..}]
+
 execute @s[scores={agravity_fall=1}] ~ ~ ~ summon spacon:anti_gravity_damage ~ ~ ~ spacon:damage_1
 execute @s[scores={agravity_fall=2}] ~ ~ ~ summon spacon:anti_gravity_damage ~ ~ ~ spacon:damage_2
 execute @s[scores={agravity_fall=3}] ~ ~ ~ summon spacon:anti_gravity_damage ~ ~ ~ spacon:damage_3
