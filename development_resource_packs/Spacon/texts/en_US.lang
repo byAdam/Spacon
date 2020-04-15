@@ -10,3 +10,5 @@ item.spacon:phazer.name=Phazer
 item.spacon:gravilever.name=Gravilever
 
 entity.spacon:anti_gravity_damage.name=fall damage
+
+item.diamond_chestplate.name=Totally a Jetpack

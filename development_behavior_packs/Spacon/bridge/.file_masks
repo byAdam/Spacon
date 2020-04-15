@@ -112,7 +112,13 @@
 							"sneak_controller": "controller.animation.player.sneak",
 							"gravity_controller": "controller.animation.player.gravity",
 							"anti_gravity": "animation.player.anti_gravity",
-							"anti_gravity_jump": "animation.player.anti_gravity_jump"
+							"anti_gravity_jump": "animation.player.anti_gravity_jump",
+							"jetpack_controller": "controller.animation.player.jetpack",
+							"jetpack_rise": "animation.player.jetpack_rise",
+							"jetpack_hover": "animation.player.jetpack_hover",
+							"jetpack_fall": "animation.player.jetpack_fall",
+							"jetpack_activator": "controller.animation.player.jetpack_activator",
+							"jetpack_cd": "animation.player.jetpack_cd"
 						},
 						"scripts": {
 							"animate": [
@@ -120,13 +126,44 @@
 								"use_controller",
 								"loop",
 								"sneak_controller",
-								"gravity_controller"
+								"gravity_controller",
+								"jetpack_controller",
+								"jetpack_activator"
 							]
 						}
 					},
 					"component_groups": {
 						"spacon:anti_gravity": {
 							"minecraft:is_ignited": {}
+						},
+						"spacon:jetpack_hover": {
+							"minecraft:spell_effects": {
+								"add_effects": [
+									{
+										"effect": "levitation",
+										"duration": 999999999,
+										"visible": 0,
+										"display_on_screen_animation": false,
+										"amplifier": -1
+									}
+								]
+							}
+						},
+						"spacon:jetpack_fall": {
+							"minecraft:spell_effects": {
+								"add_effects": [
+									{
+										"effect": "levitation",
+										"duration": 999999999,
+										"visible": 0,
+										"display_on_screen_animation": false,
+										"amplifier": -9
+									}
+								]
+							}
+						},
+						"spacon:jetpack_active": {
+							"minecraft:is_saddled": {}
 						}
 					},
 					"components": {
@@ -134,6 +171,27 @@
 							"triggers": [
 								{
 									"event": "spacon:update_gravity"
+								}
+							]
+						},
+						"minecraft:damage_sensor": {
+							"triggers": [
+								{
+									"deals_damage": false,
+									"on_damage": {
+										"filters": {
+											"all_of": [
+												{
+													"test": "has_component",
+													"value": "minecraft:is_saddled"
+												},
+												{
+													"test": "has_damage",
+													"value": "fall"
+												}
+											]
+										}
+									}
 								}
 							]
 						}
@@ -165,6 +223,34 @@
 									}
 								}
 							]
+						},
+						"spacon:jetpack_hover": {
+							"add": {
+								"component_groups": [
+									"spacon:jetpack_hover"
+								]
+							}
+						},
+						"spacon:activate_jetpack": {
+							"add": {
+								"component_groups": [
+									"spacon:jetpack_active"
+								]
+							}
+						},
+						"spacon:deactivate_jetpack": {
+							"remove": {
+								"component_groups": [
+									"spacon:jetpack_active"
+								]
+							}
+						},
+						"spacon:jetpack_fall": {
+							"add": {
+								"component_groups": [
+									"spacon:jetpack_fall"
+								]
+							}
 						}
 					}
 				}

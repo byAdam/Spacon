@@ -152,7 +152,11 @@
 		},
 		"BP/tags/player.json": {
 			"events": [
-				"spacon:update_gravity"
+				"spacon:update_gravity",
+				"spacon:jetpack_hover",
+				"spacon:activate_jetpack",
+				"spacon:deactivate_jetpack",
+				"spacon:jetpack_fall"
 			],
 			"custom_components": [],
 			"bridge_core_tags": [],
@@ -164,7 +168,13 @@
 				"sneak_controller",
 				"gravity_controller",
 				"anti_gravity",
-				"anti_gravity_jump"
+				"anti_gravity_jump",
+				"jetpack_controller",
+				"jetpack_rise",
+				"jetpack_hover",
+				"jetpack_fall",
+				"jetpack_activator",
+				"jetpack_cd"
 			],
 			"families": []
 		},
@@ -222,7 +232,9 @@
 				"controller.animation.player.click.teleporter",
 				"controller.animation.player.use",
 				"controller.animation.player.sneak",
-				"controller.animation.player.gravity"
+				"controller.animation.player.gravity",
+				"controller.animation.player.jetpack",
+				"controller.animation.player.jetpack_activator"
 			]
 		},
 		"BP/animation_controllers/gen.json": {
@@ -243,7 +255,11 @@
 			"ids": [
 				"animation.player.loop",
 				"animation.player.anti_gravity",
-				"animation.player.anti_gravity_jump"
+				"animation.player.anti_gravity_jump",
+				"animation.player.jetpack_rise",
+				"animation.player.jetpack_hover",
+				"animation.player.jetpack_fall",
+				"animation.player.jetpack_cd"
 			]
 		},
 		"BP/animations/gen.json": {
