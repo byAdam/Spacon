@@ -1,0 +1,16 @@
+//bridge-file-version: #79
+{
+	"bridge:tag": {
+		"description": {
+			"identifier": "spacon:teleporter",
+			"scripts": {
+				"animate": [
+					"teleporter"
+				]
+			},
+			"animations": {
+				"teleporter": "controller.animation.teleporter.place"
+			}
+		}
+	}
+}

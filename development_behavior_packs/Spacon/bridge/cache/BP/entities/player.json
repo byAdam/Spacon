@@ -3,7 +3,7 @@
 	"file_type": "entity",
 	"format_version": 1,
 	"file_uuid": "d0defcbe_c87e_4f48_a322_3d0c33aaefad",
-	"file_version": 22,
+	"file_version": 23,
 	"cache_content": {
 		"open": true,
 		"comment": "",
@@ -47,7 +47,11 @@
 								"data": "minecraft:player",
 								"key": "identifier",
 								"type": "string",
-								"meta": {},
+								"meta": {
+									"definitions": [
+										"entity"
+									]
+								},
 								"children": []
 							},
 							{
@@ -93,6 +97,33 @@
 										"type": "string",
 										"meta": {},
 										"children": []
+									},
+									{
+										"open": false,
+										"comment": "",
+										"data": "spacon:jetpack",
+										"key": "1",
+										"type": "string",
+										"meta": {},
+										"children": []
+									},
+									{
+										"open": false,
+										"comment": "",
+										"data": "spacon:anti_gravity",
+										"key": "2",
+										"type": "string",
+										"meta": {},
+										"children": []
+									},
+									{
+										"open": false,
+										"comment": "",
+										"data": "spacon:teleporter",
+										"key": "3",
+										"type": "string",
+										"meta": {},
+										"children": []
 									}
 								]
 							}
@@ -112,7 +143,36 @@
 								"data": "",
 								"key": "minecraft:add_bad_omen",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -254,7 +314,36 @@
 								"data": "",
 								"key": "minecraft:clear_bad_omen_spell_effect",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -273,7 +362,36 @@
 								"data": "",
 								"key": "minecraft:raid_trigger",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -387,7 +505,10 @@
 										"data": "Math.Min(query.player_level * 7, 100)",
 										"key": "on_death",
 										"type": "string",
-										"meta": {},
+										"meta": {
+											"is_value": true,
+											"is_molang": true
+										},
 										"children": []
 									}
 								]
@@ -414,7 +535,12 @@
 												"data": "player",
 												"key": "0",
 												"type": "string",
-												"meta": {},
+												"meta": {
+													"is_value": true,
+													"definitions": [
+														"entity"
+													]
+												},
 												"children": []
 											}
 										]

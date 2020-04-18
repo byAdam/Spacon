@@ -1,5 +1,5 @@
-##bridge-file-version: #2
-pack.name=Spacon
+##bridge-file-version: #3
+#pack.name=Spacon
 pack.description=by Adam Brady
 
 tile.spacon:teleporter_red_off.name=§cRed Teleporter
@@ -8,6 +8,7 @@ tile.spacon:teleporter_blue_off.name=§9Blue Teleporter
 
 item.spacon:phazer.name=Phazer
 item.spacon:gravilever.name=Gravilever
+item.spacon:gravity_gun.name=Gravity Gun
 
 entity.spacon:anti_gravity_damage.name=fall damage
 

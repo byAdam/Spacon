@@ -1,0 +1,380 @@
+//bridge-file-version: #0
+{
+	"bridge:tag": {
+		"description": {
+			"identifier": "spacon:point_damage"
+		},
+		"component_groups": {
+			"spacon:damage_1": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 1,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_2": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 2,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_3": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 3,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_4": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 4,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_5": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 5,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_6": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 6,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_7": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 7,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_8": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 8,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_9": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 9,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_10": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 10,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_11": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 11,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_12": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 12,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_13": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 13,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_14": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 14,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_15": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 15,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_16": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 16,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_17": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 17,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_18": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 18,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_19": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 19,
+							"destroyonhit": true
+						}
+					}
+				}
+			},
+			"spacon:damage_20": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"knockback": false,
+							"damage": 20,
+							"destroyonhit": true
+						}
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:explode": {
+				"power": 0,
+				"fuse_lit": true,
+				"fuse_length": 0.05
+			},
+			"minecraft:projectile": {}
+		},
+		"events": {
+			"spacon:damage_1": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_1"
+					]
+				}
+			},
+			"spacon:damage_2": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_2"
+					]
+				}
+			},
+			"spacon:damage_3": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_3"
+					]
+				}
+			},
+			"spacon:damage_4": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_4"
+					]
+				}
+			},
+			"spacon:damage_5": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_5"
+					]
+				}
+			},
+			"spacon:damage_6": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_6"
+					]
+				}
+			},
+			"spacon:damage_7": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_7"
+					]
+				}
+			},
+			"spacon:damage_8": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_8"
+					]
+				}
+			},
+			"spacon:damage_9": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_9"
+					]
+				}
+			},
+			"spacon:damage_10": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_10"
+					]
+				}
+			},
+			"spacon:damage_11": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_11"
+					]
+				}
+			},
+			"spacon:damage_12": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_12"
+					]
+				}
+			},
+			"spacon:damage_13": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_13"
+					]
+				}
+			},
+			"spacon:damage_14": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_14"
+					]
+				}
+			},
+			"spacon:damage_15": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_15"
+					]
+				}
+			},
+			"spacon:damage_16": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_16"
+					]
+				}
+			},
+			"spacon:damage_17": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_17"
+					]
+				}
+			},
+			"spacon:damage_18": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_18"
+					]
+				}
+			},
+			"spacon:damage_19": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_19"
+					]
+				}
+			},
+			"spacon:damage_20": {
+				"add": {
+					"component_groups": [
+						"spacon:damage_20"
+					]
+				}
+			}
+		}
+	}
+}

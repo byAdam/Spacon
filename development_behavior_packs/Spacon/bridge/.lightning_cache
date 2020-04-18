@@ -1,15 +1,5 @@
 {
 	"entity": {
-		"BP/entities/coordinate_reader.json": {
-			"events": [],
-			"custom_components": [],
-			"bridge_core_tags": [],
-			"identifiers": [
-				"spacon:coordinate_reader"
-			],
-			"animation_references": [],
-			"families": []
-		},
 		"BP/tags/tag_despawn.json": {
 			"events": [
 				"spacon:despawn"
@@ -28,28 +18,6 @@
 			"animation_references": [],
 			"families": []
 		},
-		"BP/entities/misc/teleporter_marker.json": {
-			"events": [
-				"spacon:teleporter_red",
-				"spacon:has_color",
-				"spacon:teleporter_green",
-				"spacon:teleporter_blue"
-			],
-			"custom_components": [],
-			"bridge_core_tags": [
-				"spacon:tag_despawn",
-				"spacon:marker"
-			],
-			"identifiers": [
-				"spacon:teleporter_marker"
-			],
-			"animation_references": [
-				"controller",
-				"loop",
-				"color_controller"
-			],
-			"families": []
-		},
 		"BP/entities/player.json": {
 			"events": [
 				"minecraft:gain_bad_omen",
@@ -59,7 +27,10 @@
 			],
 			"custom_components": [],
 			"bridge_core_tags": [
-				"spacon:player"
+				"spacon:player",
+				"spacon:jetpack",
+				"spacon:anti_gravity",
+				"spacon:teleporter"
 			],
 			"identifiers": [
 				"minecraft:player"
@@ -77,22 +48,6 @@
 			],
 			"identifiers": [
 				"spacon:raycast"
-			],
-			"animation_references": [],
-			"families": []
-		},
-		"BP/entities/misc/teleporter_marker_init.json": {
-			"events": [
-				"spacon:teleporter_red",
-				"spacon:teleporter_green",
-				"spacon:teleporter_blue"
-			],
-			"custom_components": [],
-			"bridge_core_tags": [
-				"spacon:marker"
-			],
-			"identifiers": [
-				"spacon:teleporter_marker_init"
 			],
 			"animation_references": [],
 			"families": []
@@ -156,7 +111,8 @@
 				"spacon:jetpack_hover",
 				"spacon:activate_jetpack",
 				"spacon:deactivate_jetpack",
-				"spacon:jetpack_fall"
+				"spacon:jetpack_fall",
+				"spacon:update_gravity_gun"
 			],
 			"custom_components": [],
 			"bridge_core_tags": [],
@@ -207,7 +163,37 @@
 			"animation_references": [],
 			"families": []
 		},
-		"BP/entities/anti_gravity_damage.json": {
+		"BP/entities/teleporters/teleporter_marker.json": {
+			"events": [],
+			"custom_components": [],
+			"bridge_core_tags": [
+				"spacon:tag_despawn"
+			],
+			"identifiers": [
+				"spacon:gravity_gun_marker"
+			],
+			"animation_references": [],
+			"families": [
+				"gravity_gun_marker"
+			]
+		},
+		"BP/entities/teleporters/teleporter_marker_init.json": {
+			"events": [
+				"spacon:teleporter_red",
+				"spacon:teleporter_green",
+				"spacon:teleporter_blue"
+			],
+			"custom_components": [],
+			"bridge_core_tags": [
+				"spacon:marker"
+			],
+			"identifiers": [
+				"spacon:teleporter_marker_init"
+			],
+			"animation_references": [],
+			"families": []
+		},
+		"BP/entities/anti_gravity/anti_gravity_damage.json": {
 			"events": [],
 			"custom_components": [],
 			"bridge_core_tags": [
@@ -218,30 +204,97 @@
 			],
 			"animation_references": [],
 			"families": []
+		},
+		"BP/entities/misc/coordinate_reader.json": {
+			"events": [],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"spacon:coordinate_reader"
+			],
+			"animation_references": [],
+			"families": []
+		},
+		"BP/tags/player/anti_gravity.json": {
+			"events": [
+				"spacon:update_gravity"
+			],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [],
+			"animation_references": [
+				"gravity_controller",
+				"anti_gravity",
+				"anti_gravity_jump"
+			],
+			"families": []
+		},
+		"BP/tags/player/jetpack.json": {
+			"events": [
+				"spacon:activate_jetpack",
+				"spacon:deactivate_jetpack",
+				"spacon:jetpack_fall",
+				"spacon:jetpack_hover"
+			],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [],
+			"animation_references": [
+				"jetpack_controller",
+				"jetpack_activator",
+				"jetpack_rise",
+				"jetpack_hover",
+				"jetpack_fall",
+				"jetpack_cd"
+			],
+			"families": []
+		},
+		"BP/tags/player/player.json": {
+			"events": [],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [],
+			"animation_references": [
+				"loop",
+				"sneak_controller",
+				"use_controller"
+			],
+			"families": []
+		},
+		"BP/tags/player/teleporter.json": {
+			"events": [],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [],
+			"animation_references": [
+				"teleporter"
+			],
+			"families": []
 		}
 	},
 	"animation_controller": {
 		"BP/animation_controllers/teleporter.json": {
 			"ids": [
+				"controller.animation.teleporter.place",
 				"controller.animation.teleporter",
 				"controller.animation.teleporter.color"
 			]
 		},
 		"BP/animation_controllers/player.json": {
 			"ids": [
-				"controller.animation.player.click.teleporter",
 				"controller.animation.player.use",
-				"controller.animation.player.sneak",
-				"controller.animation.player.gravity",
-				"controller.animation.player.jetpack",
-				"controller.animation.player.jetpack_activator"
+				"controller.animation.player.sneak"
 			]
 		},
-		"BP/animation_controllers/gen.json": {
+		"BP/animation_controllers/jetpack.json": {
 			"ids": [
-				"controller.animation.gen.box",
-				"controller.animation.gen",
-				"controller.animation.planet"
+				"controller.animation.jetpack",
+				"controller.animation.jetpack.activator"
+			]
+		},
+		"BP/animation_controllers/anti_gravity.json": {
+			"ids": [
+				"controller.animation.anti_gravity"
 			]
 		}
 	},
@@ -253,66 +306,82 @@
 		},
 		"BP/animations/player.json": {
 			"ids": [
-				"animation.player.loop",
-				"animation.player.anti_gravity",
-				"animation.player.anti_gravity_jump",
-				"animation.player.jetpack_rise",
-				"animation.player.jetpack_hover",
-				"animation.player.jetpack_fall",
-				"animation.player.jetpack_cd"
+				"animation.player.loop"
 			]
 		},
-		"BP/animations/gen.json": {
+		"BP/animations/anti_gravity.json": {
 			"ids": [
-				"animation.gen.box_fill",
-				"animation.gen.box_hollow",
-				"animation.gen.box_loop"
+				"animation.anti_gravity.loop",
+				"animation.anti_gravity.jump"
+			]
+		},
+		"BP/animations/jetpack.json": {
+			"ids": [
+				"animation.jetpack.rise",
+				"animation.jetpack.hover",
+				"animation.jetpack.fall",
+				"animation.jetpack.cd"
 			]
 		}
 	},
 	"entity_tag": {
-		"BP/tags/tag_despawn.json": {
-			"identifiers": [
-				"spacon:tag_despawn"
-			]
-		},
-		"BP/tags/marker.json": {
-			"identifiers": [
-				"spacon:marker"
-			]
-		},
-		"BP/tags/player.json": {
+		"BP/tags/player/player.json": {
 			"identifiers": [
 				"spacon:player"
 			]
 		},
-		"BP/tags/point_damage.json": {
+		"BP/tags/misc/marker.json": {
+			"identifiers": [
+				"spacon:marker"
+			]
+		},
+		"BP/tags/misc/point_damage.json": {
 			"identifiers": [
 				"spacon:point_damage"
+			]
+		},
+		"BP/tags/misc/tag_despawn.json/tag_despawn.json": {
+			"identifiers": [
+				"spacon:tag_despawn"
+			]
+		},
+		"BP/tags/player/anti_gravity.json": {
+			"identifiers": [
+				"spacon:anti_gravity"
+			]
+		},
+		"BP/tags/player/jetpack.json": {
+			"identifiers": [
+				"spacon:jetpack"
+			]
+		},
+		"BP/tags/player/teleporter.json": {
+			"identifiers": [
+				"spacon:teleporter"
 			]
 		}
 	},
 	"block": {
-		"BP/blocks/teleporter_red.json": {
+		"BP/blocks/void.json": {
 			"identifiers": [
-				"spacon:teleporter_blank"
+				"spacon:void"
 			]
 		},
-		"BP/blocks/teleporter_blank.json": {
+		"BP/blocks/teleporters/teleporter_blank.json": {
 			"identifiers": [
 				"spacon:teleporter_red_off"
 			]
 		},
-		"BP/blocks/void.json": {
+		"BP/blocks/teleporters/teleporter_red.json": {
 			"identifiers": [
-				"spacon:void"
+				"spacon:teleporter_blank"
 			]
 		}
 	},
 	"client_entity": {
 		"RP/entity/teleporter_marker.json": {
 			"identifiers": [
-				"spacon:anti_gravity_marker"
+				"spacon:gravity_gun_marker"
 			],
 			"particle_references": [],
 			"animation_references": [],
@@ -325,6 +394,9 @@
 			],
 			"geometry_references": [
 				"default"
+			],
+			"geometry_identifiers": [
+				"geometry.none"
 			]
 		},
 		"RP/entity/raycast.json": {
@@ -433,6 +505,26 @@
 			"geometry_references": [
 				"default"
 			]
+		},
+		"RP/entity/gravity_gun_marker.json": {
+			"identifiers": [
+				"spacon:gravity_gun_marker"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"geometry.none"
+			]
 		}
 	},
 	"item": {
@@ -443,7 +535,7 @@
 		},
 		"BP/items/phazer.json": {
 			"identifiers": [
-				"spacon:gravilever"
+				"spacon:gravity_gun"
 			]
 		},
 		"BP/items/cancel_use.json": {
@@ -454,6 +546,11 @@
 		"BP/items/gravilever.json": {
 			"identifiers": [
 				"spacon:gravilever"
+			]
+		},
+		"BP/items/gravity_gun.json": {
+			"identifiers": [
+				"spacon:gravity_gun"
 			]
 		}
 	},

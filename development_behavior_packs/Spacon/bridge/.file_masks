@@ -1,17 +1,8 @@
 {
-	"BP/entities/coordinate_reader.json": {
-		"data": {}
-	},
 	"BP/animation_controllers/teleporter.json": {
 		"data": {}
 	},
 	"BP/animations/teleporter.json": {
-		"data": {}
-	},
-	"BP/tags/tag_despawn.json": {
-		"data": {}
-	},
-	"BP/blocks/teleporter_red.json": {
 		"data": {}
 	},
 	"RP/blocks.json": {
@@ -23,80 +14,6 @@
 	"RP/entity/teleporter_marker.json": {
 		"data": {}
 	},
-	"BP/tags/marker.json": {
-		"data": {}
-	},
-	"BP/entities/misc/teleporter_marker.json": {
-		"data": {
-			"tag@spacon:tag_despawn": {
-				"minecraft:entity": {
-					"description": {},
-					"component_groups": {
-						"spacon:despawn": {
-							"minecraft:despawn": {}
-						}
-					},
-					"components": {
-						"minecraft:environment_sensor": {
-							"triggers": [
-								{
-									"filters": {
-										"all_of": [
-											{
-												"test": "has_tag",
-												"value": "spacon_despawn"
-											},
-											{
-												"test": "has_component",
-												"value": "minecraft:despawn",
-												"operator": "not"
-											}
-										]
-									},
-									"event": "spacon:despawn"
-								}
-							]
-						}
-					},
-					"events": {
-						"spacon:despawn": {
-							"add": {
-								"component_groups": [
-									"spacon:despawn"
-								]
-							}
-						}
-					}
-				}
-			},
-			"tag@spacon:marker": {
-				"minecraft:entity": {
-					"description": {},
-					"component_groups": {},
-					"components": {
-						"minecraft:damage_sensor": {
-							"triggers": [
-								{
-									"deals_damage": false
-								}
-							]
-						},
-						"minecraft:scale": {
-							"value": 0
-						},
-						"minecraft:collision_box": {
-							"width": 0,
-							"height": 0
-						}
-					},
-					"events": {}
-				}
-			}
-		}
-	},
-	"BP/blocks/teleporter_blank.json": {
-		"data": {}
-	},
 	"BP/animation_controllers/player.json": {
 		"data": {}
 	},
@@ -105,65 +22,38 @@
 			"tag@spacon:player": {
 				"minecraft:entity": {
 					"description": {
+						"scripts": {
+							"animate": [
+								"loop",
+								"sneak_controller",
+								"use_controller"
+							]
+						},
 						"animations": {
-							"use_controller": "controller.animation.player.use",
-							"teleporter_click": "controller.animation.player.click.teleporter",
 							"loop": "animation.player.loop",
 							"sneak_controller": "controller.animation.player.sneak",
-							"gravity_controller": "controller.animation.player.gravity",
-							"anti_gravity": "animation.player.anti_gravity",
-							"anti_gravity_jump": "animation.player.anti_gravity_jump",
-							"jetpack_controller": "controller.animation.player.jetpack",
-							"jetpack_rise": "animation.player.jetpack_rise",
-							"jetpack_hover": "animation.player.jetpack_hover",
-							"jetpack_fall": "animation.player.jetpack_fall",
-							"jetpack_activator": "controller.animation.player.jetpack_activator",
-							"jetpack_cd": "animation.player.jetpack_cd"
+							"use_controller": "controller.animation.player.use"
+						}
+					}
+				}
+			},
+			"tag@spacon:anti_gravity": {
+				"minecraft:entity": {
+					"description": {
+						"animations": {
+							"gravity_controller": "controller.animation.anti_gravity",
+							"anti_gravity": "animation.anti_gravity.loop",
+							"anti_gravity_jump": "animation.anti_gravity.jump"
 						},
 						"scripts": {
 							"animate": [
-								"teleporter_click",
-								"use_controller",
-								"loop",
-								"sneak_controller",
-								"gravity_controller",
-								"jetpack_controller",
-								"jetpack_activator"
+								"gravity_controller"
 							]
 						}
 					},
 					"component_groups": {
 						"spacon:anti_gravity": {
 							"minecraft:is_ignited": {}
-						},
-						"spacon:jetpack_hover": {
-							"minecraft:spell_effects": {
-								"add_effects": [
-									{
-										"effect": "levitation",
-										"duration": 999999999,
-										"visible": 0,
-										"display_on_screen_animation": false,
-										"amplifier": -1
-									}
-								]
-							}
-						},
-						"spacon:jetpack_fall": {
-							"minecraft:spell_effects": {
-								"add_effects": [
-									{
-										"effect": "levitation",
-										"duration": 999999999,
-										"visible": 0,
-										"display_on_screen_animation": false,
-										"amplifier": -9
-									}
-								]
-							}
-						},
-						"spacon:jetpack_active": {
-							"minecraft:is_saddled": {}
 						}
 					},
 					"components": {
@@ -171,27 +61,6 @@
 							"triggers": [
 								{
 									"event": "spacon:update_gravity"
-								}
-							]
-						},
-						"minecraft:damage_sensor": {
-							"triggers": [
-								{
-									"deals_damage": false,
-									"on_damage": {
-										"filters": {
-											"all_of": [
-												{
-													"test": "has_component",
-													"value": "minecraft:is_saddled"
-												},
-												{
-													"test": "has_damage",
-													"value": "fall"
-												}
-											]
-										}
-									}
 								}
 							]
 						}
@@ -223,14 +92,83 @@
 									}
 								}
 							]
+						}
+					}
+				}
+			},
+			"tag@spacon:jetpack": {
+				"minecraft:entity": {
+					"description": {
+						"animations": {
+							"jetpack_controller": "controller.animation.jetpack",
+							"jetpack_activator": "controller.animation.jetpack.activator",
+							"jetpack_rise": "animation.jetpack.rise",
+							"jetpack_hover": "animation.jetpack.hover",
+							"jetpack_fall": "animation.jetpack.fall",
+							"jetpack_cd": "animation.jetpack.cd"
 						},
+						"scripts": {
+							"animate": [
+								"jetpack_controller",
+								"jetpack_activator"
+							]
+						}
+					},
+					"component_groups": {
 						"spacon:jetpack_hover": {
-							"add": {
-								"component_groups": [
-									"spacon:jetpack_hover"
+							"minecraft:spell_effects": {
+								"add_effects": [
+									{
+										"effect": "levitation",
+										"duration": 999999999,
+										"visible": 0,
+										"display_on_screen_animation": false,
+										"amplifier": -1
+									}
 								]
 							}
 						},
+						"spacon:jetpack_fall": {
+							"minecraft:spell_effects": {
+								"add_effects": [
+									{
+										"effect": "levitation",
+										"duration": 999999999,
+										"visible": 0,
+										"display_on_screen_animation": false,
+										"amplifier": -9
+									}
+								]
+							}
+						},
+						"spacon:jetpack_active": {
+							"minecraft:is_saddled": {}
+						}
+					},
+					"components": {
+						"minecraft:damage_sensor": {
+							"triggers": [
+								{
+									"deals_damage": false,
+									"on_damage": {
+										"filters": {
+											"all_of": [
+												{
+													"test": "has_component",
+													"value": "minecraft:is_saddled"
+												},
+												{
+													"test": "has_damage",
+													"value": "fall"
+												}
+											]
+										}
+									}
+								}
+							]
+						}
+					},
+					"events": {
 						"spacon:activate_jetpack": {
 							"add": {
 								"component_groups": [
@@ -251,6 +189,27 @@
 									"spacon:jetpack_fall"
 								]
 							}
+						},
+						"spacon:jetpack_hover": {
+							"add": {
+								"component_groups": [
+									"spacon:jetpack_hover"
+								]
+							}
+						}
+					}
+				}
+			},
+			"tag@spacon:teleporter": {
+				"minecraft:entity": {
+					"description": {
+						"scripts": {
+							"animate": [
+								"teleporter"
+							]
+						},
+						"animations": {
+							"teleporter": "controller.animation.teleporter.place"
 						}
 					}
 				}
@@ -284,43 +243,10 @@
 			}
 		}
 	},
-	"BP/entities/misc/teleporter_marker_init.json": {
-		"data": {
-			"tag@spacon:marker": {
-				"minecraft:entity": {
-					"description": {},
-					"component_groups": {},
-					"components": {
-						"minecraft:damage_sensor": {
-							"triggers": [
-								{
-									"deals_damage": false
-								}
-							]
-						},
-						"minecraft:scale": {
-							"value": 0
-						},
-						"minecraft:collision_box": {
-							"width": 0,
-							"height": 0
-						}
-					},
-					"events": {}
-				}
-			}
-		}
-	},
 	"RP/entity/raycast.json": {
 		"data": {}
 	},
 	"BP/animations/player.json": {
-		"data": {}
-	},
-	"BP/animation_controllers/gen.json": {
-		"data": {}
-	},
-	"BP/animations/gen.json": {
 		"data": {}
 	},
 	"BP/blocks/void.json": {
@@ -404,9 +330,6 @@
 	"RP/items/gravilever.json": {
 		"data": {}
 	},
-	"BP/tags/player.json": {
-		"data": {}
-	},
 	"RP/entity/player.json": {
 		"data": {}
 	},
@@ -419,18 +342,100 @@
 	"RP/items/cancel_use.json": {
 		"data": {}
 	},
-	"BP/animation_controllers/bridge/custom_item_behavior.json": {
+	"RP/entity/anti_gravity_marker.json": {
+		"data": {}
+	},
+	"BP/items/gravity_gun.json": {
+		"data": {}
+	},
+	"RP/items/gravity_gun.json": {
+		"data": {}
+	},
+	"RP/texts/en_US.lang": {
+		"data": {}
+	},
+	"RP/entity/gravity_gun_marker.json": {
+		"data": {}
+	},
+	"BP/blocks/teleporters/teleporter_blank.json": {
+		"data": {}
+	},
+	"BP/blocks/teleporters/teleporter_red.json": {
+		"data": {}
+	},
+	"BP/entities/teleporters/teleporter_marker.json": {
 		"data": {
-			"08369776_bc79_40a5_b7ea_9e3c9473c709": {
-				"format_version": "1.10.0",
-				"animation_controllers": {}
+			"tag@spacon:tag_despawn": {
+				"minecraft:entity": {
+					"description": {},
+					"component_groups": {
+						"spacon:despawn": {
+							"minecraft:despawn": {}
+						}
+					},
+					"components": {
+						"minecraft:environment_sensor": {
+							"triggers": [
+								{
+									"filters": {
+										"all_of": [
+											{
+												"test": "has_tag",
+												"value": "spacon_despawn"
+											},
+											{
+												"test": "has_component",
+												"value": "minecraft:despawn",
+												"operator": "not"
+											}
+										]
+									},
+									"event": "spacon:despawn"
+								}
+							]
+						}
+					},
+					"events": {
+						"spacon:despawn": {
+							"add": {
+								"component_groups": [
+									"spacon:despawn"
+								]
+							}
+						}
+					}
+				}
 			}
 		}
 	},
-	"BP/tags/point_damage.json": {
-		"data": {}
+	"BP/entities/teleporters/teleporter_marker_init.json": {
+		"data": {
+			"tag@spacon:marker": {
+				"minecraft:entity": {
+					"description": {},
+					"component_groups": {},
+					"components": {
+						"minecraft:damage_sensor": {
+							"triggers": [
+								{
+									"deals_damage": false
+								}
+							]
+						},
+						"minecraft:scale": {
+							"value": 0
+						},
+						"minecraft:collision_box": {
+							"width": 0,
+							"height": 0
+						}
+					},
+					"events": {}
+				}
+			}
+		}
 	},
-	"BP/entities/anti_gravity_damage.json": {
+	"BP/entities/anti_gravity/anti_gravity_damage.json": {
 		"data": {
 			"tag@spacon:point_damage": {
 				"minecraft:entity": {
@@ -811,7 +816,40 @@
 			}
 		}
 	},
-	"RP/entity/anti_gravity_marker.json": {
+	"BP/entities/misc/coordinate_reader.json": {
+		"data": {}
+	},
+	"BP/tags/player/player.json": {
+		"data": {}
+	},
+	"BP/tags/misc/marker.json": {
+		"data": {}
+	},
+	"BP/tags/misc/point_damage.json": {
+		"data": {}
+	},
+	"BP/tags/misc/tag_despawn.json/tag_despawn.json": {
+		"data": {}
+	},
+	"BP/tags/player/anti_gravity.json": {
+		"data": {}
+	},
+	"BP/tags/player/jetpack.json": {
+		"data": {}
+	},
+	"BP/animation_controllers/jetpack.json": {
+		"data": {}
+	},
+	"BP/animation_controllers/anti_gravity.json": {
+		"data": {}
+	},
+	"BP/tags/player/teleporter.json": {
+		"data": {}
+	},
+	"BP/animations/anti_gravity.json": {
+		"data": {}
+	},
+	"BP/animations/jetpack.json": {
 		"data": {}
 	}
 }

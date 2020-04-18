@@ -1,4 +1,4 @@
-tp @a 0 0 0
+tp @s 0 0 0
 
 scoreboard players operation @s spacon_split = @s spacon_x
 function spacon/misc/split

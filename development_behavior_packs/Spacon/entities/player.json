@@ -1,32 +1,32 @@
-//bridge-file-version: #22
+//bridge-file-version: #23
 {
 	"minecraft:entity": {
 		"description": {
-			"animations": {
-				"use_controller": "controller.animation.player.use",
-				"teleporter_click": "controller.animation.player.click.teleporter",
-				"loop": "animation.player.loop",
-				"sneak_controller": "controller.animation.player.sneak",
-				"gravity_controller": "controller.animation.player.gravity",
-				"anti_gravity": "animation.player.anti_gravity",
-				"anti_gravity_jump": "animation.player.anti_gravity_jump",
-				"jetpack_controller": "controller.animation.player.jetpack",
-				"jetpack_rise": "animation.player.jetpack_rise",
-				"jetpack_hover": "animation.player.jetpack_hover",
-				"jetpack_fall": "animation.player.jetpack_fall",
-				"jetpack_activator": "controller.animation.player.jetpack_activator",
-				"jetpack_cd": "animation.player.jetpack_cd"
-			},
 			"scripts": {
 				"animate": [
-					"teleporter_click",
-					"use_controller",
 					"loop",
 					"sneak_controller",
+					"use_controller",
 					"gravity_controller",
 					"jetpack_controller",
-					"jetpack_activator"
+					"jetpack_activator",
+					"teleporter"
 				]
+			},
+			"animations": {
+				"loop": "animation.player.loop",
+				"sneak_controller": "controller.animation.player.sneak",
+				"use_controller": "controller.animation.player.use",
+				"gravity_controller": "controller.animation.anti_gravity",
+				"anti_gravity": "animation.anti_gravity.loop",
+				"anti_gravity_jump": "animation.anti_gravity.jump",
+				"jetpack_controller": "controller.animation.jetpack",
+				"jetpack_activator": "controller.animation.jetpack.activator",
+				"jetpack_rise": "animation.jetpack.rise",
+				"jetpack_hover": "animation.jetpack.hover",
+				"jetpack_fall": "animation.jetpack.fall",
+				"jetpack_cd": "animation.jetpack.cd",
+				"teleporter": "controller.animation.teleporter.place"
 			},
 			"identifier": "minecraft:player",
 			"is_spawnable": false,
@@ -273,13 +273,6 @@
 					}
 				]
 			},
-			"spacon:jetpack_hover": {
-				"add": {
-					"component_groups": [
-						"spacon:jetpack_hover"
-					]
-				}
-			},
 			"spacon:activate_jetpack": {
 				"add": {
 					"component_groups": [
@@ -298,6 +291,13 @@
 				"add": {
 					"component_groups": [
 						"spacon:jetpack_fall"
+					]
+				}
+			},
+			"spacon:jetpack_hover": {
+				"add": {
+					"component_groups": [
+						"spacon:jetpack_hover"
 					]
 				}
 			},

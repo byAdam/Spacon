@@ -1,0 +1,61 @@
+//bridge-file-version: #7
+{
+	"bridge:tag": {
+		"description": {
+			"identifier": "spacon:anti_gravity",
+			"animations": {
+				"gravity_controller": "controller.animation.anti_gravity",
+				"anti_gravity": "animation.anti_gravity.loop",
+				"anti_gravity_jump": "animation.anti_gravity.jump"
+			},
+			"scripts": {
+				"animate": [
+					"gravity_controller"
+				]
+			}
+		},
+		"component_groups": {
+			"spacon:anti_gravity": {
+				"minecraft:is_ignited": {}
+			}
+		},
+		"components": {
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"event": "spacon:update_gravity"
+					}
+				]
+			}
+		},
+		"events": {
+			"spacon:update_gravity": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "has_tag",
+							"value": "anti_gravity"
+						},
+						"add": {
+							"component_groups": [
+								"spacon:anti_gravity"
+							]
+						}
+					},
+					{
+						"filters": {
+							"test": "has_tag",
+							"value": "anti_gravity",
+							"operator": "not"
+						},
+						"remove": {
+							"component_groups": [
+								"spacon:anti_gravity"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

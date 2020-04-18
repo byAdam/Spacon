@@ -1,0 +1,130 @@
+//bridge-file-version: #30
+{
+	"minecraft:entity": {
+		"description": {
+			"identifier": "spacon:teleporter_marker",
+			"is_summonable": true,
+			"is_spawnable": true,
+			"animations": {
+				"controller": "controller.animation.teleporter",
+				"loop": "animation.teleporter.loop",
+				"color_controller": "controller.animation.teleporter.color"
+			},
+			"scripts": {
+				"animate": [
+					"color_controller",
+					"controller",
+					"loop"
+				]
+			}
+		},
+		"component_groups": {
+			"spacon:despawn": {
+				"minecraft:despawn": {
+					"filters": {
+						"test": "is_variant",
+						"value": -1
+					}
+				},
+				"minecraft:explode": {
+					"power": 0,
+					"fuse_lit": true,
+					"fuse_length": 0.05
+				},
+				"minecraft:is_ignited": {}
+			},
+			"spacon:teleporter_red": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"spacon:has_color": {
+				"minecraft:is_saddled": {}
+			},
+			"spacon:teleporter_green": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"spacon:teleporter_blue": {
+				"minecraft:variant": {
+					"value": 2
+				}
+			}
+		},
+		"components": {
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_tag",
+									"value": "spacon_despawn"
+								},
+								{
+									"test": "has_component",
+									"value": "minecraft:despawn",
+									"operator": "not"
+								}
+							]
+						},
+						"event": "spacon:despawn"
+					}
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:scale": {
+				"value": 0
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			}
+		},
+		"events": {
+			"spacon:despawn": {
+				"add": {
+					"component_groups": [
+						"spacon:despawn"
+					]
+				}
+			},
+			"spacon:teleporter_red": {
+				"add": {
+					"component_groups": [
+						"spacon:teleporter_red"
+					]
+				}
+			},
+			"spacon:has_color": {
+				"add": {
+					"component_groups": [
+						"spacon:has_color"
+					]
+				}
+			},
+			"spacon:teleporter_green": {
+				"add": {
+					"component_groups": [
+						"spacon:teleporter_green"
+					]
+				}
+			},
+			"spacon:teleporter_blue": {
+				"add": {
+					"component_groups": [
+						"spacon:teleporter_blue"
+					]
+				}
+			}
+		}
+	},
+	"format_version": "1.13.0"
+}

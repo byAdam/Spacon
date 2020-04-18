@@ -1,4 +1,4 @@
-//bridge-file-version: #33
+//bridge-file-version: #35
 {
 	"format_version": "1.10.0",
 	"animations": {
@@ -10,57 +10,6 @@
 			},
 			"animation_length": 0.05,
 			"loop": true
-		},
-		"animation.player.anti_gravity": {
-			"animation_length": 0.05,
-			"loop": true,
-			"timeline": {
-				"0.0": [
-					"/effect @s levitation 1 30 true"
-				]
-			}
-		},
-		"animation.player.anti_gravity_jump": {
-			"animation_length": 0.5,
-			"loop": true,
-			"timeline": {
-				"0.0": [
-					"/effect @s levitation 0"
-				],
-				"0.25": [
-					"/effect @s levitation 1 30 true"
-				]
-			}
-		},
-		"animation.player.jetpack_rise": {
-			"animation_length": 0.05,
-			"loop": true,
-			"timeline": {
-				"0.0": [
-					"/effect @s levitation 1 8 true"
-				]
-			}
-		},
-		"animation.player.jetpack_hover": {
-			"animation_length": 0.05,
-			"loop": true,
-			"timeline": {
-				"0.0": [
-					"@s spacon:jetpack_hover"
-				]
-			}
-		},
-		"animation.player.jetpack_fall": {
-			"animation_length": 0.05,
-			"loop": true,
-			"timeline": {
-				"0.0": [
-					"/effect @s slow_falling 1 0 true"
-				]
-			}
-		},
-		"animation.player.jetpack_cd": {
-			"animation_length": 0.5
 		}
 	}
 }

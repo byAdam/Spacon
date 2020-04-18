@@ -1,0 +1,106 @@
+//bridge-file-version: #7
+{
+	"bridge:tag": {
+		"description": {
+			"identifier": "spacon:jetpack",
+			"animations": {
+				"jetpack_controller": "controller.animation.jetpack",
+				"jetpack_activator": "controller.animation.jetpack.activator",
+				"jetpack_rise": "animation.jetpack.rise",
+				"jetpack_hover": "animation.jetpack.hover",
+				"jetpack_fall": "animation.jetpack.fall",
+				"jetpack_cd": "animation.jetpack.cd"
+			},
+			"scripts": {
+				"animate": [
+					"jetpack_controller",
+					"jetpack_activator"
+				]
+			}
+		},
+		"component_groups": {
+			"spacon:jetpack_hover": {
+				"minecraft:spell_effects": {
+					"add_effects": [
+						{
+							"effect": "levitation",
+							"duration": 999999999,
+							"visible": 0,
+							"display_on_screen_animation": false,
+							"amplifier": -1
+						}
+					]
+				}
+			},
+			"spacon:jetpack_fall": {
+				"minecraft:spell_effects": {
+					"add_effects": [
+						{
+							"effect": "levitation",
+							"duration": 999999999,
+							"visible": 0,
+							"display_on_screen_animation": false,
+							"amplifier": -9
+						}
+					]
+				}
+			},
+			"spacon:jetpack_active": {
+				"minecraft:is_saddled": {}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"value": "minecraft:is_saddled"
+									},
+									{
+										"test": "has_damage",
+										"value": "fall"
+									}
+								]
+							}
+						}
+					}
+				]
+			}
+		},
+		"events": {
+			"spacon:activate_jetpack": {
+				"add": {
+					"component_groups": [
+						"spacon:jetpack_active"
+					]
+				}
+			},
+			"spacon:deactivate_jetpack": {
+				"remove": {
+					"component_groups": [
+						"spacon:jetpack_active"
+					]
+				}
+			},
+			"spacon:jetpack_fall": {
+				"add": {
+					"component_groups": [
+						"spacon:jetpack_fall"
+					]
+				}
+			},
+			"spacon:jetpack_hover": {
+				"add": {
+					"component_groups": [
+						"spacon:jetpack_hover"
+					]
+				}
+			}
+		}
+	}
+}

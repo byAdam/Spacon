@@ -2,7 +2,7 @@
 	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_resource_packs\\Spacon\\texts\\en_US.lang",
 	"file_type": "client_lang",
 	"format_version": 0,
-	"file_uuid": "89512e6d_1021_4960_aa35_b01ad2b6f255",
-	"file_version": 2,
-	"cache_content": "pack.name=Spacon\npack.description=by Adam Brady\n\ntile.spacon:teleporter_blank.name=Teleporter\ntile.spacon:teleporter_red.name=Teleporter Red"
+	"file_uuid": "c5ae862b_5f41_4303_b40b_c9420de08650",
+	"file_version": 3,
+	"cache_content": "#pack.name=Spacon\npack.description=by Adam Brady\n\ntile.spacon:teleporter_red_off.name=§cRed Teleporter\ntile.spacon:teleporter_green_off.name=§aGreen Teleporter\ntile.spacon:teleporter_blue_off.name=§9Blue Teleporter\n\nitem.spacon:phazer.name=Phazer\nitem.spacon:gravilever.name=Gravilever\nitem.spacon:gravity_gun.name=Gravity Gun\n\nentity.spacon:anti_gravity_damage.name=fall damage\n\nitem.diamond_chestplate.name=Totally a Jetpack"
 }

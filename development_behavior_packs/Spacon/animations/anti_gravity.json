@@ -1,0 +1,27 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.anti_gravity.loop": {
+			"animation_length": 0.05,
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/effect @s levitation 1 30 true"
+				]
+			}
+		},
+		"animation.anti_gravity.jump": {
+			"animation_length": 0.5,
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/effect @s levitation 0"
+				],
+				"0.25": [
+					"/effect @s levitation 1 30 true"
+				]
+			}
+		}
+	}
+}

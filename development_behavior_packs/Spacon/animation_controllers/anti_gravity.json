@@ -1,0 +1,48 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.anti_gravity": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"anti_gravity": "query.is_ignited"
+						}
+					]
+				},
+				"anti_gravity_jump": {
+					"transitions": [
+						{
+							"anti_gravity": "query.any_animation_finished && (!query.is_jumping || !query.is_ignited)"
+						}
+					],
+					"animations": [
+						{
+							"anti_gravity_jump": "(1.0)"
+						}
+					]
+				},
+				"anti_gravity": {
+					"animations": [
+						{
+							"anti_gravity": "(1.0)"
+						}
+					],
+					"transitions": [
+						{
+							"default": "!query.is_ignited"
+						},
+						{
+							"anti_gravity_jump": "query.is_jumping"
+						}
+					],
+					"on_exit": [
+						"/effect @s levitation 0",
+						"/effect @s haste 0"
+					]
+				}
+			}
+		}
+	}
+}

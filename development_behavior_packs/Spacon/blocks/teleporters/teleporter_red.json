@@ -1,0 +1,19 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.10.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "spacon:teleporter_red",
+			"register_to_creative_menu": false,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:destroy_time": {
+				"value": 1
+			},
+			"minecraft:explosion_resistance": {
+				"value": 1200
+			}
+		}
+	}
+}

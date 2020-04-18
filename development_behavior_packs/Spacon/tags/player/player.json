@@ -1,0 +1,20 @@
+//bridge-file-version: #77
+{
+	"bridge:tag": {
+		"description": {
+			"identifier": "spacon:player",
+			"scripts": {
+				"animate": [
+					"loop",
+					"sneak_controller",
+					"use_controller"
+				]
+			},
+			"animations": {
+				"loop": "animation.player.loop",
+				"sneak_controller": "controller.animation.player.sneak",
+				"use_controller": "controller.animation.player.use"
+			}
+		}
+	}
+}

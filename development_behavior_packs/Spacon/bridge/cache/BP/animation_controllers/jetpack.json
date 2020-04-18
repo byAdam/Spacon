@@ -1,8 +1,8 @@
 {
-	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Spacon\\animation_controllers\\teleporter.json",
+	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Spacon/animation_controllers/jetpack.json",
 	"file_type": "animation_controller",
 	"format_version": 1,
-	"file_uuid": "5815bf47_cd92_4cdd_a10f_d9637b299922",
+	"file_uuid": "1aa3e5fc_e1d9_4e83_8ac0_1986ffcb57fd",
 	"file_version": 2,
 	"cache_content": {
 		"open": true,
@@ -33,12 +33,12 @@
 						"open": true,
 						"comment": "",
 						"data": "",
-						"key": "controller.animation.teleporter.place",
+						"key": "controller.animation.jetpack",
 						"type": "object",
 						"meta": {},
 						"children": [
 							{
-								"open": true,
+								"open": false,
 								"comment": "",
 								"data": "",
 								"key": "states",
@@ -46,145 +46,10 @@
 								"meta": {},
 								"children": [
 									{
-										"open": true,
+										"open": false,
 										"comment": "",
 										"data": "",
 										"key": "default",
-										"type": "object",
-										"meta": {},
-										"children": [
-											{
-												"open": false,
-												"comment": "",
-												"data": "",
-												"key": "transitions",
-												"type": "array",
-												"meta": {},
-												"children": [
-													{
-														"open": false,
-														"comment": "",
-														"data": "",
-														"key": "0",
-														"type": "object",
-														"meta": {},
-														"children": [
-															{
-																"open": false,
-																"comment": "",
-																"data": "variable.attack_time",
-																"key": "on_use",
-																"type": "string",
-																"meta": {},
-																"children": []
-															}
-														]
-													}
-												]
-											}
-										]
-									},
-									{
-										"open": true,
-										"comment": "",
-										"data": "",
-										"key": "on_use",
-										"type": "object",
-										"meta": {},
-										"children": [
-											{
-												"open": false,
-												"comment": "",
-												"data": "",
-												"key": "transitions",
-												"type": "array",
-												"meta": {},
-												"children": [
-													{
-														"open": false,
-														"comment": "",
-														"data": "",
-														"key": "0",
-														"type": "object",
-														"meta": {},
-														"children": [
-															{
-																"open": false,
-																"comment": "",
-																"data": "query.get_equipped_item_name(0, 0) == 'teleporter_red_off'",
-																"key": "raycast",
-																"type": "string",
-																"meta": {},
-																"children": []
-															}
-														]
-													},
-													{
-														"open": false,
-														"comment": "",
-														"data": "",
-														"key": "1",
-														"type": "object",
-														"meta": {},
-														"children": [
-															{
-																"open": false,
-																"comment": "",
-																"data": "query.get_equipped_item_name(0, 0) == 'teleporter_green_off'",
-																"key": "raycast",
-																"type": "string",
-																"meta": {},
-																"children": []
-															}
-														]
-													},
-													{
-														"open": false,
-														"comment": "",
-														"data": "",
-														"key": "2",
-														"type": "object",
-														"meta": {},
-														"children": [
-															{
-																"open": false,
-																"comment": "",
-																"data": "query.get_equipped_item_name(0, 0) == 'teleporter_blue_off'",
-																"key": "raycast",
-																"type": "string",
-																"meta": {},
-																"children": []
-															}
-														]
-													},
-													{
-														"open": false,
-														"comment": "",
-														"data": "",
-														"key": "3",
-														"type": "object",
-														"meta": {},
-														"children": [
-															{
-																"open": false,
-																"comment": "",
-																"data": "!variable.attack_time",
-																"key": "default",
-																"type": "string",
-																"meta": {},
-																"children": []
-															}
-														]
-													}
-												]
-											}
-										]
-									},
-									{
-										"open": true,
-										"comment": "",
-										"data": "",
-										"key": "raycast",
 										"type": "object",
 										"meta": {},
 										"children": [
@@ -199,7 +64,7 @@
 													{
 														"open": false,
 														"comment": "",
-														"data": "/function spacon/misc/raycast",
+														"data": "/effect @s levitation 0",
 														"key": "0",
 														"type": "string",
 														"meta": {},
@@ -226,8 +91,267 @@
 															{
 																"open": false,
 																"comment": "",
-																"data": "!variable.attack_time",
+																"data": "query.is_saddled",
+																"key": "hover",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"open": false,
+										"comment": "",
+										"data": "",
+										"key": "hover",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": false,
+												"comment": "",
+												"data": "",
+												"key": "on_entry",
+												"type": "array",
+												"meta": {},
+												"children": [
+													{
+														"open": false,
+														"comment": "",
+														"data": "/effect @s levitation 0",
+														"key": "0",
+														"type": "string",
+														"meta": {},
+														"children": []
+													},
+													{
+														"open": false,
+														"comment": "",
+														"data": "@s spacon:jetpack_hover",
+														"key": "1",
+														"type": "string",
+														"meta": {},
+														"children": []
+													}
+												]
+											},
+											{
+												"open": false,
+												"comment": "",
+												"data": "",
+												"key": "transitions",
+												"type": "array",
+												"meta": {},
+												"children": [
+													{
+														"open": false,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "query.is_jumping",
+																"key": "rise",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													},
+													{
+														"open": false,
+														"comment": "",
+														"data": "",
+														"key": "1",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "query.is_sneaking",
+																"key": "fall",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													},
+													{
+														"open": false,
+														"comment": "",
+														"data": "",
+														"key": "2",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "!query.is_saddled",
 																"key": "default",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"open": false,
+										"comment": "",
+										"data": "",
+										"key": "rise",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": false,
+												"comment": "",
+												"data": "",
+												"key": "animations",
+												"type": "array",
+												"meta": {},
+												"children": [
+													{
+														"open": false,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "(1.0)",
+																"key": "jetpack_rise",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"open": false,
+												"comment": "",
+												"data": "",
+												"key": "transitions",
+												"type": "array",
+												"meta": {},
+												"children": [
+													{
+														"open": false,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "!query.is_jumping",
+																"key": "hover",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"open": false,
+												"comment": "",
+												"data": "",
+												"key": "on_exit",
+												"type": "array",
+												"meta": {},
+												"children": [
+													{
+														"open": false,
+														"comment": "",
+														"data": "/effect @s levitation 0",
+														"key": "0",
+														"type": "string",
+														"meta": {},
+														"children": []
+													}
+												]
+											}
+										]
+									},
+									{
+										"open": false,
+										"comment": "",
+										"data": "",
+										"key": "fall",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": false,
+												"comment": "",
+												"data": "",
+												"key": "on_entry",
+												"type": "array",
+												"meta": {},
+												"children": [
+													{
+														"open": false,
+														"comment": "",
+														"data": "/effect @s levitation 0",
+														"key": "0",
+														"type": "string",
+														"meta": {},
+														"children": []
+													},
+													{
+														"open": false,
+														"comment": "",
+														"data": "@s spacon:jetpack_fall",
+														"key": "1",
+														"type": "string",
+														"meta": {},
+														"children": []
+													}
+												]
+											},
+											{
+												"open": false,
+												"comment": "",
+												"data": "",
+												"key": "transitions",
+												"type": "array",
+												"meta": {},
+												"children": [
+													{
+														"open": false,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "!query.is_sneaking",
+																"key": "hover",
 																"type": "string",
 																"meta": {},
 																"children": []
@@ -243,10 +367,10 @@
 						]
 					},
 					{
-						"open": false,
+						"open": true,
 						"comment": "",
 						"data": "",
-						"key": "controller.animation.teleporter",
+						"key": "controller.animation.jetpack.activator",
 						"type": "object",
 						"meta": {},
 						"children": [
@@ -263,6 +387,238 @@
 										"comment": "",
 										"data": "",
 										"key": "default",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": false,
+												"comment": "",
+												"data": "",
+												"key": "transitions",
+												"type": "array",
+												"meta": {},
+												"children": [
+													{
+														"open": false,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "query.armor_texture_slot(1) == 3 && query.is_jumping",
+																"key": "jump_a",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													},
+													{
+														"open": false,
+														"comment": "",
+														"data": "",
+														"key": "1",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "query.armor_texture_slot(1) != 3",
+																"key": "deactivate",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"open": false,
+										"comment": "",
+										"data": "",
+										"key": "jump_a",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": false,
+												"comment": "",
+												"data": "",
+												"key": "transitions",
+												"type": "array",
+												"meta": {},
+												"children": [
+													{
+														"open": false,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "!query.is_jumping",
+																"key": "jump_b",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													},
+													{
+														"open": false,
+														"comment": "",
+														"data": "",
+														"key": "1",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "query.any_animation_finished",
+																"key": "default",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"open": false,
+												"comment": "",
+												"data": "",
+												"key": "animations",
+												"type": "array",
+												"meta": {},
+												"children": [
+													{
+														"open": false,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "(1.0)",
+																"key": "jetpack_cd",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"open": false,
+										"comment": "",
+										"data": "",
+										"key": "jump_b",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": false,
+												"comment": "",
+												"data": "",
+												"key": "transitions",
+												"type": "array",
+												"meta": {},
+												"children": [
+													{
+														"open": false,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "query.is_jumping",
+																"key": "double_jump",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													},
+													{
+														"open": false,
+														"comment": "",
+														"data": "",
+														"key": "1",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "query.any_animation_finished",
+																"key": "default",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"open": false,
+												"comment": "",
+												"data": "",
+												"key": "animations",
+												"type": "array",
+												"meta": {},
+												"children": [
+													{
+														"open": false,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "(1.0)",
+																"key": "jetpack_cd",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"open": false,
+										"comment": "",
+										"data": "",
+										"key": "double_jump",
 										"type": "object",
 										"meta": {},
 										"children": [
@@ -286,7 +642,26 @@
 																"open": false,
 																"comment": "",
 																"data": "query.is_saddled",
-																"key": "has_color",
+																"key": "deactivate",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													},
+													{
+														"open": false,
+														"comment": "",
+														"data": "",
+														"key": "1",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "!query.is_saddled",
+																"key": "activate",
 																"type": "string",
 																"meta": {},
 																"children": []
@@ -301,36 +676,7 @@
 										"open": false,
 										"comment": "",
 										"data": "",
-										"key": "despawn",
-										"type": "object",
-										"meta": {},
-										"children": [
-											{
-												"open": false,
-												"comment": "",
-												"data": "",
-												"key": "on_entry",
-												"type": "array",
-												"meta": {},
-												"children": [
-													{
-														"open": false,
-														"comment": "",
-														"data": "/function spacon/teleporters/despawn",
-														"key": "0",
-														"type": "string",
-														"meta": {},
-														"children": []
-													}
-												]
-											}
-										]
-									},
-									{
-										"open": false,
-										"comment": "",
-										"data": "",
-										"key": "has_color",
+										"key": "deactivate",
 										"type": "object",
 										"meta": {},
 										"children": [
@@ -353,8 +699,8 @@
 															{
 																"open": false,
 																"comment": "",
-																"data": "query.is_ignited",
-																"key": "despawn",
+																"data": "(1.0)",
+																"key": "default",
 																"type": "string",
 																"meta": {},
 																"children": []
@@ -374,7 +720,7 @@
 													{
 														"open": false,
 														"comment": "",
-														"data": "/function spacon/teleporters/save",
+														"data": "@s spacon:deactivate_jetpack",
 														"key": "0",
 														"type": "string",
 														"meta": {},
@@ -383,32 +729,12 @@
 												]
 											}
 										]
-									}
-								]
-							}
-						]
-					},
-					{
-						"open": false,
-						"comment": "",
-						"data": "",
-						"key": "controller.animation.teleporter.color",
-						"type": "object",
-						"meta": {},
-						"children": [
-							{
-								"open": false,
-								"comment": "",
-								"data": "",
-								"key": "states",
-								"type": "object",
-								"meta": {},
-								"children": [
+									},
 									{
 										"open": false,
 										"comment": "",
 										"data": "",
-										"key": "default",
+										"key": "activate",
 										"type": "object",
 										"meta": {},
 										"children": [
@@ -431,123 +757,8 @@
 															{
 																"open": false,
 																"comment": "",
-																"data": "!query.is_ignited",
-																"key": "is_valid",
-																"type": "string",
-																"meta": {},
-																"children": []
-															}
-														]
-													}
-												]
-											}
-										]
-									},
-									{
-										"open": false,
-										"comment": "",
-										"data": "",
-										"key": "red",
-										"type": "object",
-										"meta": {},
-										"children": [
-											{
-												"open": false,
-												"comment": "",
-												"data": "",
-												"key": "on_entry",
-												"type": "array",
-												"meta": {},
-												"children": [
-													{
-														"open": false,
-														"comment": "",
-														"data": "/setblock ~ ~ ~ teleporter_red",
-														"key": "0",
-														"type": "string",
-														"meta": {},
-														"children": []
-													},
-													{
-														"open": false,
-														"comment": "",
-														"data": "/tag @s add teleporter_red",
-														"key": "1",
-														"type": "string",
-														"meta": {},
-														"children": []
-													}
-												]
-											}
-										]
-									},
-									{
-										"open": false,
-										"comment": "",
-										"data": "",
-										"key": "is_valid",
-										"type": "object",
-										"meta": {},
-										"children": [
-											{
-												"open": false,
-												"comment": "",
-												"data": "",
-												"key": "transitions",
-												"type": "array",
-												"meta": {},
-												"children": [
-													{
-														"open": false,
-														"comment": "",
-														"data": "",
-														"key": "0",
-														"type": "object",
-														"meta": {},
-														"children": [
-															{
-																"open": false,
-																"comment": "",
-																"data": "query.variant==0",
-																"key": "red",
-																"type": "string",
-																"meta": {},
-																"children": []
-															}
-														]
-													},
-													{
-														"open": false,
-														"comment": "",
-														"data": "",
-														"key": "1",
-														"type": "object",
-														"meta": {},
-														"children": [
-															{
-																"open": false,
-																"comment": "",
-																"data": "query.variant==1",
-																"key": "green",
-																"type": "string",
-																"meta": {},
-																"children": []
-															}
-														]
-													},
-													{
-														"open": false,
-														"comment": "",
-														"data": "",
-														"key": "2",
-														"type": "object",
-														"meta": {},
-														"children": [
-															{
-																"open": false,
-																"comment": "",
-																"data": "query.variant==2",
-																"key": "blue",
+																"data": "(1.0)",
+																"key": "default",
 																"type": "string",
 																"meta": {},
 																"children": []
@@ -560,35 +771,6 @@
 												"open": false,
 												"comment": "",
 												"data": "",
-												"key": "on_exit",
-												"type": "array",
-												"meta": {},
-												"children": [
-													{
-														"open": false,
-														"comment": "",
-														"data": "@s spacon:has_color",
-														"key": "0",
-														"type": "string",
-														"meta": {},
-														"children": []
-													}
-												]
-											}
-										]
-									},
-									{
-										"open": false,
-										"comment": "",
-										"data": "",
-										"key": "green",
-										"type": "object",
-										"meta": {},
-										"children": [
-											{
-												"open": false,
-												"comment": "",
-												"data": "",
 												"key": "on_entry",
 												"type": "array",
 												"meta": {},
@@ -596,7 +778,7 @@
 													{
 														"open": false,
 														"comment": "",
-														"data": "/setblock ~ ~ ~ teleporter_green",
+														"data": "@s spacon:activate_jetpack",
 														"key": "0",
 														"type": "string",
 														"meta": {},
@@ -605,45 +787,7 @@
 													{
 														"open": false,
 														"comment": "",
-														"data": "/tag @s add teleporter_green",
-														"key": "1",
-														"type": "string",
-														"meta": {},
-														"children": []
-													}
-												]
-											}
-										]
-									},
-									{
-										"open": false,
-										"comment": "",
-										"data": "",
-										"key": "blue",
-										"type": "object",
-										"meta": {},
-										"children": [
-											{
-												"open": false,
-												"comment": "",
-												"data": "",
-												"key": "on_entry",
-												"type": "array",
-												"meta": {},
-												"children": [
-													{
-														"open": false,
-														"comment": "",
-														"data": "/setblock ~ ~ ~ teleporter_blue",
-														"key": "0",
-														"type": "string",
-														"meta": {},
-														"children": []
-													},
-													{
-														"open": false,
-														"comment": "",
-														"data": "/tag @s add teleporter_blue",
+														"data": "/effect @s levitation 1 5 true",
 														"key": "1",
 														"type": "string",
 														"meta": {},
