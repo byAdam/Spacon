@@ -20,16 +20,16 @@
 		},
 		"component_groups": {
 			"spacon:despawn": {
+				"minecraft:explode": {
+					"power": 0,
+					"fuse_length": 0.05,
+					"fuse_lit": true
+				},
 				"minecraft:despawn": {
 					"filters": {
 						"test": "is_variant",
 						"value": -1
 					}
-				},
-				"minecraft:explode": {
-					"power": 0,
-					"fuse_lit": true,
-					"fuse_length": 0.05
 				},
 				"minecraft:is_ignited": {}
 			},
@@ -53,26 +53,6 @@
 			}
 		},
 		"components": {
-			"minecraft:environment_sensor": {
-				"triggers": [
-					{
-						"filters": {
-							"all_of": [
-								{
-									"test": "has_tag",
-									"value": "spacon_despawn"
-								},
-								{
-									"test": "has_component",
-									"value": "minecraft:despawn",
-									"operator": "not"
-								}
-							]
-						},
-						"event": "spacon:despawn"
-					}
-				]
-			},
 			"minecraft:damage_sensor": {
 				"triggers": [
 					{
@@ -86,6 +66,26 @@
 			"minecraft:collision_box": {
 				"width": 0,
 				"height": 0
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_tag",
+									"value": "spacon_despawn"
+								},
+								{
+									"test": "has_component",
+									"value": "minecraft:explode",
+									"operator": "not"
+								}
+							]
+						},
+						"event": "spacon:despawn"
+					}
+				]
 			}
 		},
 		"events": {

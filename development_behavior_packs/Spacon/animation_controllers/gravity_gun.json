@@ -1,0 +1,43 @@
+//bridge-file-version: #19
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.gravity_gun": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s spacon:deactivate_gravity_gun"
+					],
+					"transitions": [
+						{
+							"gravity_gun": "query.get_equipped_item_name(0, 0) == 'gravity_gun'"
+						}
+					]
+				},
+				"gravity_gun": {
+					"on_entry": [
+						"@s spacon:activate_gravity_gun"
+					],
+					"transitions": [
+						{
+							"default": "query.get_equipped_item_name(0, 0) != 'gravity_gun'"
+						},
+						{
+							"punch": "variable.attack_time != 0"
+						}
+					]
+				},
+				"punch": {
+					"on_entry": [
+						"/function spacon/gravity_gun/punch"
+					],
+					"transitions": [
+						{
+							"gravity_gun": "variable.attack_time == 0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

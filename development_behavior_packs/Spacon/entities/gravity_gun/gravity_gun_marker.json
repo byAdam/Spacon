@@ -1,0 +1,90 @@
+//bridge-file-version: #4
+{
+	"minecraft:entity": {
+		"description": {
+			"identifier": "spacon:gravity_gun_marker",
+			"is_summonable": true,
+			"is_spawnable": true
+		},
+		"component_groups": {
+			"spacon:despawn": {
+				"minecraft:explode": {
+					"power": 0,
+					"fuse_length": 0,
+					"fuse_lit": true
+				}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:scale": {
+				"value": 0
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 1
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_tag",
+									"value": "spacon_despawn"
+								},
+								{
+									"test": "has_component",
+									"value": "minecraft:explode",
+									"operator": "not"
+								}
+							]
+						},
+						"event": "spacon:despawn"
+					},
+					{
+						"filters": {
+							"test": "is_riding",
+							"value": false
+						},
+						"event": "spacon:despawn"
+					}
+				]
+			},
+			"minecraft:type_family": {
+				"family": [
+					"gravity_gun_marker"
+				]
+			},
+			"minecraft:rideable": {
+				"pull_in_entities": true,
+				"seats": [
+					{
+						"position": [
+							0,
+							2,
+							0
+						]
+					}
+				],
+				"seat_count": 1
+			}
+		},
+		"events": {
+			"spacon:despawn": {
+				"add": {
+					"component_groups": [
+						"spacon:despawn"
+					]
+				}
+			}
+		}
+	},
+	"format_version": "1.13.0"
+}

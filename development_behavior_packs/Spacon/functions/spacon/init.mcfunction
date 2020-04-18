@@ -2,8 +2,7 @@ scoreboard objectives add spacon_x dummy
 scoreboard objectives add spacon_y dummy
 scoreboard objectives add spacon_z dummy
 
-scoreboard objectives add spacon_gen_ttl dummy
-
+scoreboard objectives add spacon_ttl dummy
 scoreboard objectives add agravity_fall dummy
 
 scoreboard objectives add spacon_digit dummy

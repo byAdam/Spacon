@@ -1,0 +1,54 @@
+//bridge-file-version: #23
+{
+	"bridge:tag": {
+		"description": {
+			"identifier": "spacon:gravity_gun",
+			"animations": {
+				"gravity_gun_controller": "controller.animation.gravity_gun"
+			},
+			"scripts": {
+				"animate": [
+					"gravity_gun_controller"
+				]
+			}
+		},
+		"component_groups": {
+			"spacon:gravity_gun": {
+				"minecraft:rideable": {
+					"family_types": [
+						"gravity_gun_marker"
+					],
+					"seats": [
+						{
+							"position": [
+								0,
+								0,
+								6
+							]
+						}
+					],
+					"seat_count": 1
+				},
+				"minecraft:addrider": {
+					"entity_type": "spacon:gravity_gun_marker"
+				}
+			}
+		},
+		"events": {
+			"spacon:activate_gravity_gun": {
+				"add": {
+					"component_groups": [
+						"spacon:gravity_gun"
+					]
+				}
+			},
+			"spacon:deactivate_gravity_gun": {
+				"remove": {
+					"component_groups": [
+						"spacon:gravity_gun"
+					]
+				}
+			}
+		}
+	}
+}

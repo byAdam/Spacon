@@ -30,7 +30,8 @@
 				"spacon:player",
 				"spacon:jetpack",
 				"spacon:anti_gravity",
-				"spacon:teleporter"
+				"spacon:teleporter",
+				"spacon:gravity_gun"
 			],
 			"identifiers": [
 				"minecraft:player"
@@ -50,43 +51,6 @@
 				"spacon:raycast"
 			],
 			"animation_references": [],
-			"families": []
-		},
-		"BP/entities/gen/planet_marker.json": {
-			"events": [
-				"minecraft:entity_spawned",
-				"spacon:generate_planet"
-			],
-			"custom_components": [],
-			"bridge_core_tags": [
-				"spacon:marker"
-			],
-			"identifiers": [
-				"spacon:planet_marker"
-			],
-			"animation_references": [
-				"gen_controller",
-				"box_loop",
-				"planet_controller"
-			],
-			"families": []
-		},
-		"BP/entities/gen/box_builder.json/world_destroyer.json": {
-			"events": [
-				"spacon:hollow"
-			],
-			"custom_components": [],
-			"bridge_core_tags": [
-				"spacon:marker"
-			],
-			"identifiers": [
-				"spacon:box_builder"
-			],
-			"animation_references": [
-				"controller",
-				"hollow",
-				"fill"
-			],
 			"families": []
 		},
 		"BP/entities/gen/box_builder.json": {
@@ -167,7 +131,8 @@
 			"events": [],
 			"custom_components": [],
 			"bridge_core_tags": [
-				"spacon:tag_despawn"
+				"spacon:tag_despawn",
+				"spacon:marker"
 			],
 			"identifiers": [
 				"spacon:gravity_gun_marker"
@@ -270,6 +235,130 @@
 				"teleporter"
 			],
 			"families": []
+		},
+		"BP/tags/player/gravity_gun.json": {
+			"events": [
+				"spacon:activate_gravity_gun",
+				"spacon:deactivate_gravity_gun"
+			],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [],
+			"animation_references": [
+				"gravity_gun_controller"
+			],
+			"families": []
+		},
+		"BP/entities/gravity_gun/gravity_gun_marker.json/gravity_gun_marker.json": {
+			"events": [],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"spacon:gravity_gun_marker"
+			],
+			"animation_references": [],
+			"families": [
+				"gravity_gun_marker"
+			]
+		},
+		"BP/entities/gravity_gun/gravity_gun_marker.json": {
+			"events": [],
+			"custom_components": [],
+			"bridge_core_tags": [
+				"spacon:tag_despawn",
+				"spacon:marker"
+			],
+			"identifiers": [
+				"spacon:gravity_gun_marker"
+			],
+			"animation_references": [],
+			"families": [
+				"gravity_gun_marker"
+			]
+		},
+		"BP/tags/misc/tag_despawn.json": {
+			"events": [
+				"spacon:despawn"
+			],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [],
+			"animation_references": [],
+			"families": []
+		},
+		"BP/tags/misc/point_damage.json": {
+			"events": [
+				"spacon:damage_1",
+				"spacon:damage_2",
+				"spacon:damage_3",
+				"spacon:damage_4",
+				"spacon:damage_5",
+				"spacon:damage_6",
+				"spacon:damage_7",
+				"spacon:damage_8",
+				"spacon:damage_9",
+				"spacon:damage_10",
+				"spacon:damage_11",
+				"spacon:damage_12",
+				"spacon:damage_13",
+				"spacon:damage_14",
+				"spacon:damage_15",
+				"spacon:damage_16",
+				"spacon:damage_17",
+				"spacon:damage_18",
+				"spacon:damage_19",
+				"spacon:damage_20"
+			],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [],
+			"animation_references": [],
+			"families": []
+		},
+		"BP/tags/misc/marker.json": {
+			"events": [],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [],
+			"animation_references": [],
+			"families": []
+		},
+		"BP/entities/gravity_gun/gravity_gun_throw.json/gravity_gun_throw.mcfunction.json": {
+			"events": [
+				"spacon:on_damage"
+			],
+			"custom_components": [],
+			"bridge_core_tags": [
+				"spacon:tag_despawn",
+				"spacon:marker"
+			],
+			"identifiers": [
+				"spacon:gravity_gun_throw"
+			],
+			"animation_references": [],
+			"families": []
+		},
+		"BP/entities/gravity_gun/gravity_gun_throw.json": {
+			"events": [
+				"spacon:on_damage"
+			],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"spacon:gravity_gun_throw"
+			],
+			"animation_references": [],
+			"families": []
+		},
+		"BP/entities/misc/point_damage.json": {
+			"events": [],
+			"custom_components": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"spacon:point_damage"
+			],
+			"animation_references": [],
+			"families": []
 		}
 	},
 	"animation_controller": {
@@ -295,6 +384,11 @@
 		"BP/animation_controllers/anti_gravity.json": {
 			"ids": [
 				"controller.animation.anti_gravity"
+			]
+		},
+		"BP/animation_controllers/gravity_gun.json": {
+			"ids": [
+				"controller.animation.gravity_gun"
 			]
 		}
 	},
@@ -347,7 +441,7 @@
 		},
 		"BP/tags/player/anti_gravity.json": {
 			"identifiers": [
-				"spacon:anti_gravity"
+				"spacon:gravity_gun"
 			]
 		},
 		"BP/tags/player/jetpack.json": {
@@ -358,6 +452,16 @@
 		"BP/tags/player/teleporter.json": {
 			"identifiers": [
 				"spacon:teleporter"
+			]
+		},
+		"BP/tags/player/gravity_gun.json": {
+			"identifiers": [
+				"spacon:gravity_gun"
+			]
+		},
+		"BP/tags/misc/tag_despawn.json": {
+			"identifiers": [
+				"spacon:tag_despawn"
 			]
 		}
 	},
@@ -506,9 +610,29 @@
 				"default"
 			]
 		},
-		"RP/entity/gravity_gun_marker.json": {
+		"RP/entity/gravity_gun_throw.json/gravity_gun_marker.json": {
 			"identifiers": [
 				"spacon:gravity_gun_marker"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"geometry.none"
+			]
+		},
+		"RP/entity/gravity_gun_throw.json": {
+			"identifiers": [
+				"spacon:gravity_gun_throw"
 			],
 			"particle_references": [],
 			"animation_references": [],

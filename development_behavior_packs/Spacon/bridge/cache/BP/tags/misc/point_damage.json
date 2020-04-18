@@ -1,9 +1,9 @@
 {
-	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Spacon\\tags\\point_damage.json",
+	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Spacon\\tags\\misc\\point_damage.json",
 	"file_type": "entity_tag",
 	"format_version": 1,
 	"file_uuid": "b45d746a_0962_4252_afa8_2140c0080296",
-	"file_version": 0,
+	"file_version": 2,
 	"cache_content": {
 		"open": true,
 		"comment": "",
@@ -33,7 +33,7 @@
 						"meta": {},
 						"children": [
 							{
-								"open": false,
+								"open": true,
 								"comment": "",
 								"data": "spacon:point_damage",
 								"key": "identifier",
@@ -57,7 +57,36 @@
 								"data": "",
 								"key": "spacon:damage_1",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -73,7 +102,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -124,7 +161,36 @@
 								"data": "",
 								"key": "spacon:damage_2",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -140,7 +206,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -191,7 +265,36 @@
 								"data": "",
 								"key": "spacon:damage_3",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -207,7 +310,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -258,7 +369,36 @@
 								"data": "",
 								"key": "spacon:damage_4",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -274,7 +414,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -325,7 +473,36 @@
 								"data": "",
 								"key": "spacon:damage_5",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -341,7 +518,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -392,7 +577,36 @@
 								"data": "",
 								"key": "spacon:damage_6",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -408,7 +622,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -459,7 +681,36 @@
 								"data": "",
 								"key": "spacon:damage_7",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -475,7 +726,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -526,7 +785,36 @@
 								"data": "",
 								"key": "spacon:damage_8",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -542,7 +830,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -593,7 +889,36 @@
 								"data": "",
 								"key": "spacon:damage_9",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -609,7 +934,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -660,7 +993,36 @@
 								"data": "",
 								"key": "spacon:damage_10",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -676,7 +1038,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -727,7 +1097,36 @@
 								"data": "",
 								"key": "spacon:damage_11",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -743,7 +1142,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -794,7 +1201,36 @@
 								"data": "",
 								"key": "spacon:damage_12",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -810,7 +1246,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -861,7 +1305,36 @@
 								"data": "",
 								"key": "spacon:damage_13",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -877,7 +1350,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -928,7 +1409,36 @@
 								"data": "",
 								"key": "spacon:damage_14",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -944,7 +1454,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -995,7 +1513,36 @@
 								"data": "",
 								"key": "spacon:damage_15",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -1011,7 +1558,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -1062,7 +1617,36 @@
 								"data": "",
 								"key": "spacon:damage_16",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -1078,7 +1662,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -1129,7 +1721,36 @@
 								"data": "",
 								"key": "spacon:damage_17",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -1145,7 +1766,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -1196,7 +1825,36 @@
 								"data": "",
 								"key": "spacon:damage_18",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -1212,7 +1870,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -1263,7 +1929,36 @@
 								"data": "",
 								"key": "spacon:damage_19",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -1279,7 +1974,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -1330,7 +2033,36 @@
 								"data": "",
 								"key": "spacon:damage_20",
 								"type": "object",
-								"meta": {},
+								"meta": {
+									"expand_path_exceptions": [
+										"minecraft:burns_in_daylight",
+										"minecraft:can_climb",
+										"minecraft:can_power_jump",
+										"minecraft:hide",
+										"minecraft:home",
+										"minecraft:is_baby",
+										"minecraft:is_charged",
+										"minecraft:is_chested",
+										"minecraft:is_hidden_when_invisible",
+										"minecraft:is_ignited",
+										"minecraft:is_illager_captain",
+										"minecraft:is_saddled",
+										"minecraft:is_shaking",
+										"minecraft:is_sheared",
+										"minecraft:is_stackable",
+										"minecraft:is_stunned",
+										"minecraft:is_tamed",
+										"minecraft:item_hopper",
+										"minecraft:jump.dynamic",
+										"minecraft:managed_wandering_trader",
+										"minecraft:persistent",
+										"minecraft:scaffolding_climber",
+										"minecraft:trade_resupply",
+										"minecraft:trust",
+										"minecraft:wants_jockey",
+										"minecraft:annotation.open_door"
+									]
+								},
 								"children": [
 									{
 										"open": false,
@@ -1346,7 +2078,15 @@
 												"data": "",
 												"key": "on_hit",
 												"type": "object",
-												"meta": {},
+												"meta": {
+													"expand_path_exceptions": [
+														"thrown_potion_effect",
+														"douse_fire",
+														"arrow_effect",
+														"remove_on_hit",
+														"teleport_owner"
+													]
+												},
 												"children": [
 													{
 														"open": false,
@@ -1399,7 +2139,36 @@
 						"data": "",
 						"key": "components",
 						"type": "object",
-						"meta": {},
+						"meta": {
+							"expand_path_exceptions": [
+								"minecraft:burns_in_daylight",
+								"minecraft:can_climb",
+								"minecraft:can_power_jump",
+								"minecraft:hide",
+								"minecraft:home",
+								"minecraft:is_baby",
+								"minecraft:is_charged",
+								"minecraft:is_chested",
+								"minecraft:is_hidden_when_invisible",
+								"minecraft:is_ignited",
+								"minecraft:is_illager_captain",
+								"minecraft:is_saddled",
+								"minecraft:is_shaking",
+								"minecraft:is_sheared",
+								"minecraft:is_stackable",
+								"minecraft:is_stunned",
+								"minecraft:is_tamed",
+								"minecraft:item_hopper",
+								"minecraft:jump.dynamic",
+								"minecraft:managed_wandering_trader",
+								"minecraft:persistent",
+								"minecraft:scaffolding_climber",
+								"minecraft:trade_resupply",
+								"minecraft:trust",
+								"minecraft:wants_jockey",
+								"minecraft:annotation.open_door"
+							]
+						},
 						"children": [
 							{
 								"open": false,

@@ -1,0 +1,1 @@
+tp @e[tag=spacon_gun_target,c=1] ~ ~ ~

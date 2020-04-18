@@ -1,0 +1,65 @@
+//bridge-file-version: #34
+{
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "spacon:gravity_gun_throw",
+			"is_summonable": true,
+			"is_spawnable": true
+		},
+		"component_groups": {
+			"spacon:projectile": {
+				"minecraft:projectile": {
+					"power": 1
+				},
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"deals_damage": false
+						}
+					]
+				},
+				"minecraft:rideable": {
+					"pull_in_entities": true,
+					"seats": [
+						{
+							"position": [
+								0,
+								1,
+								0
+							]
+						}
+					],
+					"seat_count": 1
+				}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"on_damage": {
+							"event": "spacon:on_damage"
+						}
+					}
+				]
+			},
+			"minecraft:health": {
+				"value": 100
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 1
+			}
+		},
+		"events": {
+			"spacon:on_damage": {
+				"add": {
+					"component_groups": [
+						"spacon:projectile"
+					]
+				}
+			}
+		}
+	}
+}

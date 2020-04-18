@@ -3,7 +3,7 @@
 	"file_type": "entity",
 	"format_version": 1,
 	"file_uuid": "d0defcbe_c87e_4f48_a322_3d0c33aaefad",
-	"file_version": 23,
+	"file_version": 24,
 	"cache_content": {
 		"open": true,
 		"comment": "",
@@ -121,6 +121,15 @@
 										"comment": "",
 										"data": "spacon:teleporter",
 										"key": "3",
+										"type": "string",
+										"meta": {},
+										"children": []
+									},
+									{
+										"open": false,
+										"comment": "",
+										"data": "spacon:gravity_gun",
+										"key": "4",
 										"type": "string",
 										"meta": {},
 										"children": []
@@ -978,7 +987,7 @@
 								]
 							},
 							{
-								"open": false,
+								"open": true,
 								"comment": "",
 								"data": "",
 								"key": "minecraft:rideable",

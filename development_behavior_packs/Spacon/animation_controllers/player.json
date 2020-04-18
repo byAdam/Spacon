@@ -1,4 +1,4 @@
-//bridge-file-version: #240
+//bridge-file-version: #244
 {
 	"format_version": "1.10.0",
 	"animation_controllers": {
@@ -18,6 +18,9 @@
 						},
 						{
 							"gravilever": "query.get_equipped_item_name(0, 0) == 'gravilever'"
+						},
+						{
+							"gravity_gun": "query.get_equipped_item_name(0, 0) == 'gravity_gun'"
 						}
 					]
 				},
@@ -45,6 +48,19 @@
 						{
 							"default": "query.item_remaining_use_duration <= 0"
 						}
+					]
+				},
+				"gravity_gun": {
+					"on_entry": [
+						"/function spacon/items/gravity_gun"
+					],
+					"transitions": [
+						{
+							"default": "query.item_remaining_use_duration <= 0"
+						}
+					],
+					"on_exit": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 spacon:gravity_gun"
 					]
 				}
 			}

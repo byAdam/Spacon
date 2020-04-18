@@ -1,4 +1,4 @@
-//bridge-file-version: #23
+//bridge-file-version: #24
 {
 	"minecraft:entity": {
 		"description": {
@@ -10,7 +10,8 @@
 					"gravity_controller",
 					"jetpack_controller",
 					"jetpack_activator",
-					"teleporter"
+					"teleporter",
+					"gravity_gun_controller"
 				]
 			},
 			"animations": {
@@ -26,7 +27,8 @@
 				"jetpack_hover": "animation.jetpack.hover",
 				"jetpack_fall": "animation.jetpack.fall",
 				"jetpack_cd": "animation.jetpack.cd",
-				"teleporter": "controller.animation.teleporter.place"
+				"teleporter": "controller.animation.teleporter.place",
+				"gravity_gun_controller": "controller.animation.gravity_gun"
 			},
 			"identifier": "minecraft:player",
 			"is_spawnable": false,
@@ -65,6 +67,26 @@
 			},
 			"spacon:jetpack_active": {
 				"minecraft:is_saddled": {}
+			},
+			"spacon:gravity_gun": {
+				"minecraft:rideable": {
+					"family_types": [
+						"gravity_gun_marker"
+					],
+					"seats": [
+						{
+							"position": [
+								0,
+								0,
+								6
+							]
+						}
+					],
+					"seat_count": 1
+				},
+				"minecraft:addrider": {
+					"entity_type": "spacon:gravity_gun_marker"
+				}
 			},
 			"minecraft:add_bad_omen": {
 				"minecraft:spell_effects": {
@@ -283,7 +305,9 @@
 			"spacon:deactivate_jetpack": {
 				"remove": {
 					"component_groups": [
-						"spacon:jetpack_active"
+						"spacon:jetpack_active",
+						"spacon:jetpack_hover",
+						"spacon:jetpack_fall"
 					]
 				}
 			},
@@ -298,6 +322,20 @@
 				"add": {
 					"component_groups": [
 						"spacon:jetpack_hover"
+					]
+				}
+			},
+			"spacon:activate_gravity_gun": {
+				"add": {
+					"component_groups": [
+						"spacon:gravity_gun"
+					]
+				}
+			},
+			"spacon:deactivate_gravity_gun": {
+				"remove": {
+					"component_groups": [
+						"spacon:gravity_gun"
 					]
 				}
 			},

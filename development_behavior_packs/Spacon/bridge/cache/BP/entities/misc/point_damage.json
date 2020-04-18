@@ -1,9 +1,9 @@
 {
-	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Spacon\\tags\\misc\\marker.json",
-	"file_type": "entity_tag",
+	"file_path": "C:\\Users\\Adam\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Spacon\\entities\\misc\\point_damage.json",
+	"file_type": "entity",
 	"format_version": 1,
-	"file_uuid": "22d8bb18_b781_4868_bd8f_75a00c16e9a5",
-	"file_version": 5,
+	"file_uuid": "8b63ba3b_1bee_4bbc_a01f_f4b8adb35661",
+	"file_version": 4,
 	"cache_content": {
 		"open": true,
 		"comment": "",
@@ -15,8 +15,17 @@
 			{
 				"open": true,
 				"comment": "",
+				"data": "1.13.0",
+				"key": "format_version",
+				"type": "string",
+				"meta": {},
+				"children": []
+			},
+			{
+				"open": true,
+				"comment": "",
 				"data": "",
-				"key": "bridge:tag",
+				"key": "minecraft:entity",
 				"type": "object",
 				"meta": {
 					"expand_path_exceptions": [
@@ -35,22 +44,35 @@
 							{
 								"open": true,
 								"comment": "",
-								"data": "spacon:marker",
+								"data": "spacon:point_damage",
 								"key": "identifier",
 								"type": "string",
+								"meta": {
+									"definitions": [
+										"entity"
+									]
+								},
+								"children": []
+							},
+							{
+								"open": false,
+								"comment": "",
+								"data": "true",
+								"key": "is_summonable",
+								"type": "boolean",
+								"meta": {},
+								"children": []
+							},
+							{
+								"open": true,
+								"comment": "",
+								"data": "true",
+								"key": "is_spawnable",
+								"type": "boolean",
 								"meta": {},
 								"children": []
 							}
 						]
-					},
-					{
-						"open": true,
-						"comment": "",
-						"data": "",
-						"key": "component_groups",
-						"type": "object",
-						"meta": {},
-						"children": []
 					},
 					{
 						"open": true,
@@ -90,34 +112,60 @@
 						},
 						"children": [
 							{
-								"open": false,
+								"open": true,
 								"comment": "",
 								"data": "",
-								"key": "minecraft:damage_sensor",
+								"key": "minecraft:projectile",
 								"type": "object",
 								"meta": {},
 								"children": [
 									{
-										"open": false,
+										"open": true,
 										"comment": "",
 										"data": "",
-										"key": "triggers",
-										"type": "array",
-										"meta": {},
+										"key": "on_hit",
+										"type": "object",
+										"meta": {
+											"expand_path_exceptions": [
+												"thrown_potion_effect",
+												"douse_fire",
+												"arrow_effect",
+												"remove_on_hit",
+												"teleport_owner"
+											]
+										},
 										"children": [
 											{
-												"open": false,
+												"open": true,
 												"comment": "",
 												"data": "",
-												"key": "0",
+												"key": "impact_damage",
 												"type": "object",
 												"meta": {},
 												"children": [
 													{
+														"open": true,
+														"comment": "",
+														"data": "true",
+														"key": "knockback",
+														"type": "string",
+														"meta": {},
+														"children": []
+													},
+													{
 														"open": false,
 														"comment": "",
-														"data": "false",
-														"key": "deals_damage",
+														"data": "1",
+														"key": "damage",
+														"type": "number",
+														"meta": {},
+														"children": []
+													},
+													{
+														"open": false,
+														"comment": "",
+														"data": "true",
+														"key": "destroyonhit",
 														"type": "boolean",
 														"meta": {},
 														"children": []
@@ -127,64 +175,8 @@
 										]
 									}
 								]
-							},
-							{
-								"open": true,
-								"comment": "",
-								"data": "",
-								"key": "minecraft:scale",
-								"type": "object",
-								"meta": {},
-								"children": [
-									{
-										"open": false,
-										"comment": "",
-										"data": "0.0",
-										"key": "value",
-										"type": "string",
-										"meta": {},
-										"children": []
-									}
-								]
-							},
-							{
-								"open": true,
-								"comment": "",
-								"data": "",
-								"key": "minecraft:collision_box",
-								"type": "object",
-								"meta": {},
-								"children": [
-									{
-										"open": false,
-										"comment": "",
-										"data": "0.0",
-										"key": "width",
-										"type": "string",
-										"meta": {},
-										"children": []
-									},
-									{
-										"open": false,
-										"comment": "",
-										"data": "0.0",
-										"key": "height",
-										"type": "string",
-										"meta": {},
-										"children": []
-									}
-								]
 							}
 						]
-					},
-					{
-						"open": true,
-						"comment": "",
-						"data": "",
-						"key": "events",
-						"type": "object",
-						"meta": {},
-						"children": []
 					}
 				]
 			}

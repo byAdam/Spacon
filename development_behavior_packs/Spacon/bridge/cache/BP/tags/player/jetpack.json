@@ -3,7 +3,7 @@
 	"file_type": "entity_tag",
 	"format_version": 1,
 	"file_uuid": "7de4056c_43f5_42fc_95ec_ae8204583465",
-	"file_version": 7,
+	"file_version": 8,
 	"cache_content": {
 		"open": true,
 		"comment": "",
@@ -596,7 +596,7 @@
 						]
 					},
 					{
-						"open": false,
+						"open": true,
 						"comment": "",
 						"data": "",
 						"key": "events",
@@ -643,7 +643,7 @@
 								]
 							},
 							{
-								"open": false,
+								"open": true,
 								"comment": "",
 								"data": "",
 								"key": "spacon:deactivate_jetpack",
@@ -651,7 +651,7 @@
 								"meta": {},
 								"children": [
 									{
-										"open": false,
+										"open": true,
 										"comment": "",
 										"data": "",
 										"key": "remove",
@@ -659,11 +659,11 @@
 										"meta": {},
 										"children": [
 											{
-												"open": false,
+												"open": true,
 												"comment": "",
 												"data": "",
 												"key": "component_groups",
-												"type": "array",
+												"type": "object",
 												"meta": {},
 												"children": [
 													{
@@ -671,6 +671,24 @@
 														"comment": "",
 														"data": "spacon:jetpack_active",
 														"key": "0",
+														"type": "string",
+														"meta": {},
+														"children": []
+													},
+													{
+														"open": false,
+														"comment": "",
+														"data": "spacon:jetpack_hover",
+														"key": "1",
+														"type": "string",
+														"meta": {},
+														"children": []
+													},
+													{
+														"open": false,
+														"comment": "",
+														"data": "spacon:jetpack_fall",
+														"key": "2",
 														"type": "string",
 														"meta": {},
 														"children": []

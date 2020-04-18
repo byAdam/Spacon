@@ -179,7 +179,9 @@
 						"spacon:deactivate_jetpack": {
 							"remove": {
 								"component_groups": [
-									"spacon:jetpack_active"
+									"spacon:jetpack_active",
+									"spacon:jetpack_hover",
+									"spacon:jetpack_fall"
 								]
 							}
 						},
@@ -210,6 +212,58 @@
 						},
 						"animations": {
 							"teleporter": "controller.animation.teleporter.place"
+						}
+					}
+				}
+			},
+			"tag@spacon:gravity_gun": {
+				"minecraft:entity": {
+					"description": {
+						"animations": {
+							"gravity_gun_controller": "controller.animation.gravity_gun"
+						},
+						"scripts": {
+							"animate": [
+								"gravity_gun_controller"
+							]
+						}
+					},
+					"component_groups": {
+						"spacon:gravity_gun": {
+							"minecraft:rideable": {
+								"family_types": [
+									"gravity_gun_marker"
+								],
+								"seats": [
+									{
+										"position": [
+											0,
+											0,
+											6
+										]
+									}
+								],
+								"seat_count": 1
+							},
+							"minecraft:addrider": {
+								"entity_type": "spacon:gravity_gun_marker"
+							}
+						}
+					},
+					"events": {
+						"spacon:activate_gravity_gun": {
+							"add": {
+								"component_groups": [
+									"spacon:gravity_gun"
+								]
+							}
+						},
+						"spacon:deactivate_gravity_gun": {
+							"remove": {
+								"component_groups": [
+									"spacon:gravity_gun"
+								]
+							}
 						}
 					}
 				}
@@ -251,60 +305,6 @@
 	},
 	"BP/blocks/void.json": {
 		"data": {}
-	},
-	"BP/entities/gen/planet_marker.json": {
-		"data": {
-			"tag@spacon:marker": {
-				"minecraft:entity": {
-					"description": {},
-					"component_groups": {},
-					"components": {
-						"minecraft:damage_sensor": {
-							"triggers": [
-								{
-									"deals_damage": false
-								}
-							]
-						},
-						"minecraft:scale": {
-							"value": 0
-						},
-						"minecraft:collision_box": {
-							"width": 0,
-							"height": 0
-						}
-					},
-					"events": {}
-				}
-			}
-		}
-	},
-	"BP/entities/gen/box_builder.json/world_destroyer.json": {
-		"data": {
-			"tag@spacon:marker": {
-				"minecraft:entity": {
-					"description": {},
-					"component_groups": {},
-					"components": {
-						"minecraft:damage_sensor": {
-							"triggers": [
-								{
-									"deals_damage": false
-								}
-							]
-						},
-						"minecraft:scale": {
-							"value": 0
-						},
-						"minecraft:collision_box": {
-							"width": 0,
-							"height": 0
-						}
-					},
-					"events": {}
-				}
-			}
-		}
 	},
 	"BP/entities/gen/box_builder.json": {
 		"data": {}
@@ -354,9 +354,6 @@
 	"RP/texts/en_US.lang": {
 		"data": {}
 	},
-	"RP/entity/gravity_gun_marker.json": {
-		"data": {}
-	},
 	"BP/blocks/teleporters/teleporter_blank.json": {
 		"data": {}
 	},
@@ -365,12 +362,39 @@
 	},
 	"BP/entities/teleporters/teleporter_marker.json": {
 		"data": {
+			"tag@spacon:marker": {
+				"minecraft:entity": {
+					"description": {},
+					"component_groups": {},
+					"components": {
+						"minecraft:damage_sensor": {
+							"triggers": [
+								{
+									"deals_damage": false
+								}
+							]
+						},
+						"minecraft:scale": {
+							"value": 0
+						},
+						"minecraft:collision_box": {
+							"width": 0,
+							"height": 0
+						}
+					},
+					"events": {}
+				}
+			},
 			"tag@spacon:tag_despawn": {
 				"minecraft:entity": {
 					"description": {},
 					"component_groups": {
 						"spacon:despawn": {
-							"minecraft:despawn": {}
+							"minecraft:explode": {
+								"power": 0,
+								"fuse_length": 0,
+								"fuse_lit": true
+							}
 						}
 					},
 					"components": {
@@ -385,7 +409,7 @@
 											},
 											{
 												"test": "has_component",
-												"value": "minecraft:despawn",
+												"value": "minecraft:explode",
 												"operator": "not"
 											}
 										]
@@ -850,6 +874,177 @@
 		"data": {}
 	},
 	"BP/animations/jetpack.json": {
+		"data": {}
+	},
+	"BP/tags/player/gravity_gun.json": {
+		"data": {}
+	},
+	"BP/animation_controllers/gravity_gun.json": {
+		"data": {}
+	},
+	"BP/entities/gravity_gun/gravity_gun_marker.json/gravity_gun_marker.json": {
+		"data": {}
+	},
+	"BP/entities/gravity_gun/gravity_gun_marker.json": {
+		"data": {
+			"tag@spacon:marker": {
+				"minecraft:entity": {
+					"description": {},
+					"component_groups": {},
+					"components": {
+						"minecraft:damage_sensor": {
+							"triggers": [
+								{
+									"deals_damage": false
+								}
+							]
+						},
+						"minecraft:scale": {
+							"value": 0
+						},
+						"minecraft:collision_box": {
+							"width": 0,
+							"height": 0
+						}
+					},
+					"events": {}
+				}
+			},
+			"tag@spacon:tag_despawn": {
+				"minecraft:entity": {
+					"description": {},
+					"component_groups": {
+						"spacon:despawn": {
+							"minecraft:explode": {
+								"power": 0,
+								"fuse_length": 0,
+								"fuse_lit": true
+							}
+						}
+					},
+					"components": {
+						"minecraft:environment_sensor": {
+							"triggers": [
+								{
+									"filters": {
+										"all_of": [
+											{
+												"test": "has_tag",
+												"value": "spacon_despawn"
+											},
+											{
+												"test": "has_component",
+												"value": "minecraft:explode",
+												"operator": "not"
+											}
+										]
+									},
+									"event": "spacon:despawn"
+								}
+							]
+						}
+					},
+					"events": {
+						"spacon:despawn": {
+							"add": {
+								"component_groups": [
+									"spacon:despawn"
+								]
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"BP/tags/misc/tag_despawn.json": {
+		"data": {}
+	},
+	"BP/entities/gravity_gun/gravity_gun_throw.json/gravity_gun_throw.mcfunction.json": {
+		"data": {
+			"tag@spacon:marker": {
+				"minecraft:entity": {
+					"description": {},
+					"component_groups": {},
+					"components": {
+						"minecraft:damage_sensor": {
+							"triggers": [
+								{
+									"deals_damage": false
+								}
+							]
+						},
+						"minecraft:scale": {
+							"value": 0
+						},
+						"minecraft:collision_box": {
+							"width": 0,
+							"height": 0
+						}
+					},
+					"events": {}
+				}
+			},
+			"tag@spacon:tag_despawn": {
+				"minecraft:entity": {
+					"description": {},
+					"component_groups": {
+						"spacon:despawn": {
+							"minecraft:explode": {
+								"power": 0,
+								"fuse_length": 0,
+								"fuse_lit": true
+							}
+						}
+					},
+					"components": {
+						"minecraft:environment_sensor": {
+							"triggers": [
+								{
+									"filters": {
+										"all_of": [
+											{
+												"test": "has_tag",
+												"value": "spacon_despawn"
+											},
+											{
+												"test": "has_component",
+												"value": "minecraft:explode",
+												"operator": "not"
+											}
+										]
+									},
+									"event": "spacon:despawn"
+								}
+							]
+						}
+					},
+					"events": {
+						"spacon:despawn": {
+							"add": {
+								"component_groups": [
+									"spacon:despawn"
+								]
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"BP/entities/gravity_gun/gravity_gun_throw.json": {
+		"data": {}
+	},
+	"BP/entities/misc/point_damage.json": {
+		"data": {}
+	},
+	"RP/entity/gravity_gun_throw.json/gravity_gun_marker.json": {
+		"data": {}
+	},
+	"RP/entity/gravity_gun_throw.json": {
+		"data": {}
+	},
+	"RP/sounds.json": {
 		"data": {}
 	}
 }

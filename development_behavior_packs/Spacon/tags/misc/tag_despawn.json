@@ -1,4 +1,4 @@
-//bridge-file-version: #5
+//bridge-file-version: #9
 {
 	"bridge:tag": {
 		"description": {
@@ -6,7 +6,11 @@
 		},
 		"component_groups": {
 			"spacon:despawn": {
-				"minecraft:despawn": {}
+				"minecraft:explode": {
+					"power": 0,
+					"fuse_length": 0,
+					"fuse_lit": true
+				}
 			}
 		},
 		"components": {
@@ -21,7 +25,7 @@
 								},
 								{
 									"test": "has_component",
-									"value": "minecraft:despawn",
+									"value": "minecraft:explode",
 									"operator": "not"
 								}
 							]

@@ -3,7 +3,7 @@
 	"file_type": "animation_controller",
 	"format_version": 1,
 	"file_uuid": "b37075b2_92a8_4de6_8fdb_5e341a71d7d1",
-	"file_version": 240,
+	"file_version": 244,
 	"cache_content": {
 		"open": true,
 		"comment": "",
@@ -136,6 +136,27 @@
 																"comment": "",
 																"data": "query.get_equipped_item_name(0, 0) == 'gravilever'",
 																"key": "gravilever",
+																"type": "string",
+																"meta": {
+																	"is_molang": true
+																},
+																"children": []
+															}
+														]
+													},
+													{
+														"open": true,
+														"comment": "",
+														"data": "",
+														"key": "2",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": true,
+																"comment": "",
+																"data": "query.get_equipped_item_name(0, 0) == 'gravity_gun'",
+																"key": "gravity_gun",
 																"type": "string",
 																"meta": {
 																	"is_molang": true
@@ -297,6 +318,83 @@
 																"children": []
 															}
 														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"open": true,
+										"comment": "",
+										"data": "",
+										"key": "gravity_gun",
+										"type": "object",
+										"meta": {},
+										"children": [
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "on_entry",
+												"type": "array",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "/function spacon/items/gravity_gun",
+														"key": "0",
+														"type": "string",
+														"meta": {},
+														"children": []
+													}
+												]
+											},
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "transitions",
+												"type": "array",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "",
+														"key": "0",
+														"type": "object",
+														"meta": {},
+														"children": [
+															{
+																"open": false,
+																"comment": "",
+																"data": "query.item_remaining_use_duration <= 0",
+																"key": "default",
+																"type": "string",
+																"meta": {},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"open": true,
+												"comment": "",
+												"data": "",
+												"key": "on_exit",
+												"type": "array",
+												"meta": {},
+												"children": [
+													{
+														"open": true,
+														"comment": "",
+														"data": "/replaceitem entity @s slot.weapon.mainhand 0 spacon:gravity_gun",
+														"key": "0",
+														"type": "string",
+														"meta": {},
+														"children": []
 													}
 												]
 											}

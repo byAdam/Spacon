@@ -1,4 +1,4 @@
-//bridge-file-version: #7
+//bridge-file-version: #8
 {
 	"bridge:tag": {
 		"description": {
@@ -83,7 +83,9 @@
 			"spacon:deactivate_jetpack": {
 				"remove": {
 					"component_groups": [
-						"spacon:jetpack_active"
+						"spacon:jetpack_active",
+						"spacon:jetpack_hover",
+						"spacon:jetpack_fall"
 					]
 				}
 			},
